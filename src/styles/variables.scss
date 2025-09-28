@@ -1,0 +1,28 @@
+:root {
+  --color-white: #ffffff;
+  --color-black1: #333333;
+  --color-black2: #171717;
+
+  --color-accent: #1749B3;
+
+  --color-red: #FE0000;
+
+  --color-bg: #ECF3FB;
+
+  --color-button-active-click: #4B84FD;
+  --color-button-active-click-black: #606060;
+
+  --border-radius: 12px;
+  --border-radius-l: 16px;
+  --border-radius-xl: 32px;
+
+  --font-family-base: 'Gotham-Pro';
+
+  --container-width: #{fluid-to-laptop(
+      $container-desktop-width,
+      $container-laptop-width
+    )};
+  --container-padding-x: 24px;
+
+  --transition-duration: 0.2s;
+}

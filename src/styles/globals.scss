@@ -1,0 +1,90 @@
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base), sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-black1);
+  background-color: var(--color-bg);
+}
+
+.paragraph-blog {
+  font-size: 18px;
+
+  @include laptop {
+    font-size: 17px;
+  }
+}
+
+h1,
+.h1 {
+  @include fluid-text(36, 30);
+
+  line-height: 140%;
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  @include fluid-text(32, 25);
+
+  line-height: 140%;
+  font-weight: 700;
+}
+
+h3,
+.h3 {
+  @include fluid-text(26, 22);
+
+  line-height: 140%;
+  font-weight: 500;
+}
+
+h4,
+.h4 {
+  @include fluid-text(22, 19);
+
+  line-height: 140%;
+  font-weight: 700;
+}
+
+h5,
+.h5 {
+  @include fluid-text(20, 18);
+
+  line-height: 140%;
+  font-weight: 400;
+}
+
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  @include focus-visible;
+}
