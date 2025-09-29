@@ -18,6 +18,7 @@ export default (props) => {
     imgSrc,
     hasFillIcon,
     iconPosition = '',
+    extraAttrs
   } = props
 
   const isLink = href !== undefined
@@ -44,7 +45,9 @@ export default (props) => {
       'button',
         className,
         mode && `button--${mode}`
-      )} {...attributesByTag}
+        )}
+        {...attributesByTag}
+        {...extraAttrs}
         >
       {!isLabelHidden && (
         <span className="button__label">{label}</span>

@@ -36,6 +36,11 @@
 
   &--icon {
     color: var(--color-black1);
+
+    &-white {
+      color: var(--color-white);
+
+    }
   }
 
   &--copy {
@@ -57,13 +62,15 @@
   }
 
   &--icon,
-  &--copy {
-    padding: 10px;
+  &--copy,
+  &--icon-white {
+    padding : 10px;
     width: 44px;
     height: 44px;
     background: none;
     border: none;
     border-radius: 0;
+    margin-left: -10px;
   }
 
   &--link {
@@ -143,11 +150,11 @@
   }
 
   &--cross {
-    padding: 8px;
+    padding: 4px;
     color: #3A3A3C;
     background-color: #1717171A;
     border: none;
-    border-radius: 50px;
+    border-radius: 100px;
   }
 
   @include mobile {
@@ -164,6 +171,10 @@
 
     &.button--change-plan {
       font-size: 17px;
+    }
+
+    &.button--cross {
+      padding-block: 4px;
     }
   }
 
@@ -187,6 +198,10 @@
     &.button--icon,
     &.button--copy {
       color: var(--color-accent);
+    }
+
+    &.button--icon-white {
+      color: #E5E5E5;
     }
 
     &.button--sign-in-with {
@@ -241,6 +256,10 @@
     &.button--icon,
     &.button--copy {
       color: var(--color-button-active-click);
+      background: none;
+    }
+
+    &.button--icon-white {
       background: none;
     }
 
