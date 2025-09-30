@@ -1,9 +1,52 @@
 .hero {
-  padding-block: 50px;
+  padding-block: fluid-to-laptop(60, 50);
 
   &__inner {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    color: var(--color-white);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__body,
+  &__image {
+    overflow: hidden;
+    border-radius: var(--border-radius-xl);
+  }
+
+  &__body {
+    display: grid;
+    row-gap: fluid(40, 32);
+    padding-block: fluid-to-laptop(114, 20);
+    padding-inline: fluid-to-laptop(60, 20);
+    background-color: var(--color-accent);
+
+    &-text {
+      display: grid;
+      row-gap: fluid-to-laptop(24, 16);
+    }
+  }
+
+  &__title {
+    max-width: 472px;
+  }
+
+  &__image {
+    min-height: 276px;
+    background: url('/src/assets/images/hero/1.jpg') center/cover no-repeat;
+
+    @include mobile {
+      order: -1;
+    }
+  }
+
+  &__button-wrapper {
+    @include mobile {
+      display: contents;
+    }
   }
 }

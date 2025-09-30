@@ -21,7 +21,6 @@ export default (props) => {
         height={55}
         loading={loading}
       />
-
     </a>
   )
 }

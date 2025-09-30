@@ -34,20 +34,29 @@ export default (props) => {
         <nav className="header__menu">
           <ul className="header__menu-list">
             <li className="header__menu-item">
-              <details className='header__menu-dropdown'>
-                <summary className='header__menu-dropdown-button' aria-label="Subscriptions">
+              <details className="header__menu-dropdown">
+                <summary
+                  className="header__menu-dropdown-button"
+                  aria-label="Subscriptions"
+                >
                   <span>Subscriptions</span>
-                  <Icon name='arrow-down'/>
+                  <Icon name="arrow-down" />
                 </summary>
-                <ul className='header__menu-dropdown-list' role="menu">
-                  <li className='header__menu-dropdown-item' role="menuitem">
-                    <a className='header__menu-dropdown-link' href="/">Netflix</a>
+                <ul className="header__menu-dropdown-list" role="menu">
+                  <li className="header__menu-dropdown-item" role="menuitem">
+                    <a className="header__menu-dropdown-link" href="/">
+                      Netflix
+                    </a>
                   </li>
-                  <li className='header__menu-dropdown-item' role="menuitem">
-                    <a className='header__menu-dropdown-link' href="/">YouTube Premium</a>
+                  <li className="header__menu-dropdown-item" role="menuitem">
+                    <a className="header__menu-dropdown-link" href="/">
+                      YouTube Premium
+                    </a>
                   </li>
-                  <li className='header__menu-dropdown-item' role="menuitem">
-                    <a className='header__menu-dropdown-link' href="/">Spotify</a>
+                  <li className="header__menu-dropdown-item" role="menuitem">
+                    <a className="header__menu-dropdown-link" href="/">
+                      Spotify
+                    </a>
                   </li>
                 </ul>
               </details>
@@ -70,41 +79,38 @@ export default (props) => {
         <div className="header__actions">
           <div className="header__soc1als">
             <Button
-              label='WhatsApp'
-              mode='icon'
+              label="WhatsApp"
+              mode="icon"
               href
               isLabelHidden
-              iconName='whatsapp'
+              iconName="whatsapp"
               hasFillIcon
             />
             <Button
-              label='WhatsApp'
-              mode='icon'
+              label="WhatsApp"
+              mode="icon"
               href
               isLabelHidden
-              iconName='telegram'
+              iconName="telegram"
               hasFillIcon
             />
           </div>
-          <SwitchLanguage/>
-          <Button
-            label='Log in'
-            mode='blue-small'
-          />
+          <SwitchLanguage />
+          <Button label="Log in" mode="blue-small" />
         </div>
         <dialog
-        className="header__overlay-menu-dialog"
-        data-js-overlay-menu-dialog=""
+          className="header__overlay-menu-dialog"
+          data-js-overlay-menu-dialog=""
         >
           <div className="header__overlay-menu-dialog-header">
             <div className="header__overlay-menu-dialog-header-inner">
               <Logo className="header__logo" loading="eager" />
               <Button
                 className="header__burger-button-cross"
-                label='cross'
-                mode='cross'
+                label="cross"
+                mode="cross"
                 isLabelHidden
-                iconName='cross'
+                iconName="cross"
                 hasFillIcon
                 extraAttrs={{
                   'data-js-overlay-menu-burger-button-cross': '',
@@ -121,10 +127,7 @@ export default (props) => {
                       className="header__overlay-menu-dialog-body-link"
                       href="/"
                     >
-                      <Icon
-                        name='home'
-                        hasFill
-                      />
+                      <Icon name="home" hasFill />
                       <span>Home</span>
                     </a>
                   </li>
@@ -133,10 +136,7 @@ export default (props) => {
                       className="header__overlay-menu-dialog-body-link"
                       href="/"
                     >
-                      <Icon
-                        name='about'
-                        hasFill
-                      />
+                      <Icon name="about" hasFill />
                       <span>About</span>
                     </a>
                   </li>
@@ -145,10 +145,7 @@ export default (props) => {
                       className="header__overlay-menu-dialog-body-link"
                       href="/"
                     >
-                      <Icon
-                        name='faq'
-                        hasFill
-                      />
+                      <Icon name="faq" hasFill />
                       <span>FAQ</span>
                     </a>
                   </li>
@@ -157,10 +154,7 @@ export default (props) => {
                       className="header__overlay-menu-dialog-body-link"
                       href="/"
                     >
-                      <Icon
-                        name='support'
-                        hasFill
-                      />
+                      <Icon name="support" hasFill />
                       <span>Support</span>
                     </a>
                   </li>
@@ -193,12 +187,8 @@ export default (props) => {
                 </ul>
               </nav>
               <div className="header__overlay-menu-dialog-body-actions">
-                <Button
-                  label='Login'
-                />
-                <Button
-                  label='Sign up'
-                />
+                <Button label="Login" />
+                <Button label="Sign up" />
               </div>
             </div>
           </div>
@@ -206,35 +196,32 @@ export default (props) => {
             <div className="header__overlay-menu-dialog-footer-inner">
               <div className="header__soc1als">
                 <Button
-                  label='WhatsApp'
-                  mode='icon'
+                  label="WhatsApp"
+                  mode="icon"
                   href
                   isLabelHidden
-                  iconName='whatsapp'
+                  iconName="whatsapp"
                   hasFillIcon
                 />
                 <Button
-                  label='WhatsApp'
-                  mode='icon'
+                  label="WhatsApp"
+                  mode="icon"
                   href
                   isLabelHidden
-                  iconName='telegram'
+                  iconName="telegram"
                   hasFillIcon
                 />
               </div>
-              <SwitchLanguage
-                mode='overlay-menu'
-              />
+              <SwitchLanguage mode="overlay-menu" />
             </div>
           </div>
-
         </dialog>
-          <BurgerButton
-            className="header__burger-button visible-tablet"
-            extraAttrs={{
-              'data-js-overlay-menu-burger-button': '',
-            }}
-          />
+        <BurgerButton
+          className="header__burger-button visible-tablet"
+          extraAttrs={{
+            'data-js-overlay-menu-burger-button': '',
+          }}
+        />
       </div>
     </header>
   )

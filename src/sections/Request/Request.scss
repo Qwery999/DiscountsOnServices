@@ -1,0 +1,30 @@
+.request {
+  padding-top: fluid-to-laptop(60, 50);
+  padding-bottom: fluid-to-laptop(120, 100);
+
+  &__inner {
+    display: grid;
+    gap: 32px;
+    padding: 40px fluid(60, 20);
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius-xl);
+
+    @include mobile-above {
+      grid-template-columns: 1fr auto;
+    }
+  }
+
+  &__body {
+    display: grid;
+    row-gap: fluid-to-laptop(21, 16);
+    color: var(--color-white);
+  }
+
+  &__button {
+    place-self: center stretch;
+
+    @include mobile-above {
+      width: fluid-to-laptop(296, 239);
+    }
+  }
+}

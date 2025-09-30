@@ -1,7 +1,7 @@
 import './Button.scss'
 import clsx from 'clsx'
 import Icon from '@/components/Icon'
-import {Image} from 'minista'
+import { Image } from 'minista'
 
 export default (props) => {
   const {
@@ -18,7 +18,7 @@ export default (props) => {
     imgSrc,
     hasFillIcon,
     iconPosition = '',
-    extraAttrs
+    extraAttrs,
   } = props
 
   const isLink = href !== undefined
@@ -27,31 +27,17 @@ export default (props) => {
   const buttonAttributes = { type }
   const attributesByTag = isLink ? linkAttributes : buttonAttributes
   const iconComponent = iconName && (
-    <Icon
-      className='button__icon'
-      name={iconName}
-      hasFill={hasFillIcon}
-    />
+    <Icon className="button__icon" name={iconName} hasFill={hasFillIcon} />
   )
-  const imageComponent = imgSrc && (
-    <Image
-      src={imgSrc}
-    />
-  )
+  const imageComponent = imgSrc && <Image src={imgSrc} />
 
   return (
-    <Component className={
-      clsx(
-      'button',
-        className,
-        mode && `button--${mode}`
-        )}
-        {...attributesByTag}
-        {...extraAttrs}
-        >
-      {!isLabelHidden && (
-        <span className="button__label">{label}</span>
-      )}
+    <Component
+      className={clsx('button', className, mode && `button--${mode}`)}
+      {...attributesByTag}
+      {...extraAttrs}
+    >
+      {!isLabelHidden && <span className="button__label">{label}</span>}
       {iconComponent}
       {imageComponent}
       {iconPosition === 'after' && iconComponent}

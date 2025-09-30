@@ -63,8 +63,8 @@
 
     &-link {
       @include hover {
-        color: var(--color-white);
         text-decoration: underline;
+        color: var(--color-white);
       }
     }
   }
@@ -77,8 +77,8 @@
     @include mobile {
       grid-column: -1 / 1;
       flex-direction: row;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
   }
 
@@ -95,17 +95,16 @@
     font-size: 16px;
 
     @include tablet {
-      border-top: 1px solid #afafaf;
       font-size: 15px;
+      border-top: 1px solid #afafaf;
 
       &::after,
       &::before {
         --width: calc((100vw - 100%) / 2);
 
-        position: absolute;
         content: '';
+        position: absolute;
         top: -1px;
-
         width: var(--width);
         height: 1px;
         background-color: #afafaf;
@@ -125,10 +124,10 @@
     }
 
     &-text {
-      color: #afafaf;
-      font-weight: 300;
       padding-top: 12px;
+      font-weight: 300;
       line-height: 130%;
+      color: #afafaf;
     }
   }
 }

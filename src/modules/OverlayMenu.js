@@ -3,7 +3,7 @@ class OverlayMenu {
     root: '[data-js-overlay-menu]',
     dialog: '[data-js-overlay-menu-dialog]',
     burgerButton: '[data-js-overlay-menu-burger-button]',
-    crossButton: '[data-js-overlay-menu-burger-button-cross]'
+    crossButton: '[data-js-overlay-menu-burger-button-cross]',
   }
 
   stateClasses = {
@@ -20,7 +20,9 @@ class OverlayMenu {
     this.burgerButtonElement = this.rootElement.querySelector(
       this.selectors.burgerButton
     )
-    this.crossButtonElement = this.rootElement.querySelector(this.selectors.crossButton)
+    this.crossButtonElement = this.rootElement.querySelector(
+      this.selectors.crossButton
+    )
     this.bindEvents()
   }
 

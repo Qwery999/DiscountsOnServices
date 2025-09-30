@@ -2,10 +2,10 @@
   @include flex-center(true);
   @include square(44px);
 
+  margin-right: -7px;
   padding: 0;
   background: transparent;
   border: none;
-  margin-right: -7px;
 
   @include hover {
     &:not(.is-active) {

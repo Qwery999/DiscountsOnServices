@@ -3,11 +3,11 @@
   display: inline-block;
 
   &__button {
-    list-style: none;
-    cursor: pointer;
     display: flex;
     align-items: center;
     column-gap: 5px;
+    list-style: none;
+    cursor: pointer;
 
     &::-webkit-details-marker {
       display: none;
@@ -28,14 +28,14 @@
     padding: 7px 10px;
     background: var(--color-white);
     border-radius: var(--border-radius-l);
-    box-shadow: 0 20px 48px 0 rgba(177, 177, 177, 0.40);
+    box-shadow: 0 20px 48px 0 rgba(177, 177, 177, 0.4);
   }
 
   &__item {
     border-radius: 8px;
 
     @include hover {
-      background-color: #F7F7F7;
+      background-color: #f7f7f7;
     }
   }
 
@@ -65,7 +65,5 @@
         }
       }
     }
-
-
   }
 }

@@ -1,0 +1,103 @@
+.how-it-works {
+  &__inner {
+    display: grid;
+    row-gap: fluid(20, 16);
+  }
+
+  &__step-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__step-card {
+    display: grid;
+    row-gap: 26px;
+    padding: 6px 6px 40px 40px;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-xl);
+
+    @include tablet {
+      padding: 20px;
+    }
+
+    &-body {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+
+      @include tablet {
+        align-items: center;
+      }
+    }
+
+    &-description {
+      max-width: 227px;
+
+      &--short {
+        max-width: 115px;
+      }
+
+      @include mobile {
+        max-width: none;
+      }
+    }
+
+    &-image {
+      width: fluid-to-laptop(173, 80);
+    }
+  }
+
+  &__friends {
+    display: flex;
+    justify-content: space-between;
+    padding-block: fluid-to-laptop(40, 32);
+    padding-inline: fluid-to-laptop(80, 32);
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius-xl);
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 32px;
+      padding: 32px 20px 20px;
+    }
+
+    &-text {
+      display: grid;
+      row-gap: fluid-to-laptop(24, 16);
+      color: var(--color-white);
+
+      @include mobile-above {
+        max-width: fluid-to-laptop(508, 275);
+      }
+    }
+
+    &-link {
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-inline: fluid-to-laptop(71, 20);
+        padding-top: fluid-to-laptop(28, 20);
+        padding-bottom: fluid-to-laptop(18, 10);
+        background-color: #f1f4f8;
+        border-radius: var(--border-radius-l);
+
+        @include mobile-above {
+          align-self: center;
+        }
+      }
+
+      &-button-wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+      }
+    }
+  }
+}

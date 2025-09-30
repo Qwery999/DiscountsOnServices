@@ -1,2 +1,36 @@
 .about {
+  &__inner {
+    display: grid;
+    gap: 16px;
+
+    @include mobile-above {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid-to-laptop(32, 16);
+    padding: fluid-to-laptop(60, 20);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-xl);
+
+    &-logo {
+      width: fluid-to-laptop(130, 60);
+    }
+  }
+
+  &__image {
+    width: 592px;
+    max-height: fluid-to-laptop(535, 412);
+    object-fit: cover;
+    border-radius: var(--border-radius-xl);
+
+    @include mobile {
+      order: -1;
+      width: 100%;
+      max-height: none;
+    }
+  }
 }
