@@ -16,21 +16,18 @@ export default (props) => {
     },
     {
       label: 'Support',
-      href: '/about',
+      href: 'mailto:discountsonservices.support@gmail',
     },
     {
       label: 'About',
-      href: '/about',
+      href: '/#about',
     },
   ]
 
   return (
     <header className="header" data-js-overlay-menu="">
       <div className="header__inner container">
-        <div className="header__logo-wrapper">
-          <Logo className="header__logo" loading="eager" />
-          <span className="header__logo-text">DiscountsOnServices</span>
-        </div>
+        <Logo className="header__logo" loading="eager" />
         <nav className="header__menu">
           <ul className="header__menu-list">
             <li className="header__menu-item">
@@ -44,17 +41,17 @@ export default (props) => {
                 </summary>
                 <ul className="header__menu-dropdown-list" role="menu">
                   <li className="header__menu-dropdown-item" role="menuitem">
-                    <a className="header__menu-dropdown-link" href="/">
+                    <a className="header__menu-dropdown-link" href="/netflix">
                       Netflix
                     </a>
                   </li>
                   <li className="header__menu-dropdown-item" role="menuitem">
-                    <a className="header__menu-dropdown-link" href="/">
+                    <a className="header__menu-dropdown-link" href="/youtube">
                       YouTube Premium
                     </a>
                   </li>
                   <li className="header__menu-dropdown-item" role="menuitem">
-                    <a className="header__menu-dropdown-link" href="/">
+                    <a className="header__menu-dropdown-link" href="/spotify">
                       Spotify
                     </a>
                   </li>
@@ -163,7 +160,7 @@ export default (props) => {
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
                       className="header__overlay-menu-dialog-body-link"
-                      href="/"
+                      href="/netflix"
                     >
                       Netflix
                     </a>
@@ -171,7 +168,7 @@ export default (props) => {
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
                       className="header__overlay-menu-dialog-body-link"
-                      href="/"
+                      href="/youtube"
                     >
                       YouTube
                     </a>
@@ -179,7 +176,7 @@ export default (props) => {
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
                       className="header__overlay-menu-dialog-body-link"
-                      href="/"
+                      href="/spotify"
                     >
                       Spotify
                     </a>

@@ -9,21 +9,21 @@ export default () => {
       label: 'Netflix subscription rates',
       description:
         'The constant contributes to the task of the same and thus the intended features and the set relation to the check and set also.',
-      href: '/',
+      href: '/netflix',
       imgSrc: '/src/assets/images/subscriptions/subscriptions1.jpg',
     },
     {
-      label: 'Netflix subscription rates',
+      label: 'Spotify Premium',
       description:
         'The constant contributes to the task of the same and thus the intended features and the set relation to the check and set also.',
-      href: '/',
+      href: '/spotify',
       imgSrc: '/src/assets/images/subscriptions/subscriptions2.jpg',
     },
     {
-      label: 'Netflix subscription rates',
+      label: 'YouTube Premium ',
       description:
         'The constant contributes to the task of the same and thus the intended features and the set relation to the check and set also.',
-      href: '/',
+      href: '/youtube',
       imgSrc: '/src/assets/images/subscriptions/subscriptions3.jpg',
     },
   ]
@@ -33,6 +33,7 @@ export default () => {
       className="subscriptions"
       title="Choose a subscription"
       titleId="subscriptions"
+      id='subscriptions'
     >
       <div className="subscriptions__inner">
         {subscriptions.map((subscription, index) => (

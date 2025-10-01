@@ -2,10 +2,26 @@ import './Faq.scss'
 import Section from '@/layouts/Section'
 import Icon from '@/components/Icon'
 import Button from '@/components/Button'
+import clsx from 'clsx'
 
-export default () => {
+export default (props) => {
+  const {
+    /**
+     * '' (default) | padding-bottom
+     */
+    mode,
+  } = props
+
   return (
-    <Section className="faq" title="FAQ" titleId="faq">
+    <Section
+      className={clsx(
+        "faq",
+        mode && `faq--${mode}`
+      )}
+      title="FAQ"
+      titleId="faq"
+      id='faq'
+    >
       <div className="faq__inner">
         <div className="faq__accordion" data-js-accordion="">
           <details className="faq__details" data-js-accordion-details="">
@@ -112,7 +128,11 @@ export default () => {
             </div>
           </details>
         </div>
-        <Button label="Support" mode="black" />
+        <Button
+          label="Support"
+          mode="black"
+          href='mailto:discountsonservices.support@gmail'
+        />
       </div>
     </Section>
   )

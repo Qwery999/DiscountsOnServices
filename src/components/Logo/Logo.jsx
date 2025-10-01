@@ -21,6 +21,7 @@ export default (props) => {
         height={55}
         loading={loading}
       />
+      <span className="logo-text">DiscountsOnServices</span>
     </a>
   )
 }

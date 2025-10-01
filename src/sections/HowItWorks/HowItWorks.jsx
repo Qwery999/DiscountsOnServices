@@ -2,6 +2,7 @@ import './HowItWorks.scss'
 import Section from '@/layouts/Section'
 import { Image } from 'minista'
 import Button from '@/components/Button'
+import InviteFriends from '@/components/InviteFriends'
 
 export default () => {
   return (
@@ -52,32 +53,7 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className="how-it-works__friends">
-          <div className="how-it-works__friends-text">
-            <h3 className="how-it-works__friends-title">Invite friends</h3>
-            <div className="how-it-works__friends-description">
-              <p>
-                Starting today up to 50% for NETFLIX, YOUTUBE, SPOTIFY
-                subscriptions with a secure payment from PAYPAL
-              </p>
-            </div>
-          </div>
-          <div className="how-it-works__friends-link-wrapper">
-            <p className="how-it-works__friends-link-clue h5">
-              Click on the link
-            </p>
-            <div className="how-it-works__friends-link-button-wrapper">
-              <Button label="DISCOUNTS ON SERVICES" mode="link" href />
-              <Button
-                label="Copy"
-                mode="copy"
-                isLabelHidden
-                iconName="copy"
-                hasFillIcon
-              />
-            </div>
-          </div>
-        </div>
+        <InviteFriends/>
       </div>
     </Section>
   )

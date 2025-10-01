@@ -9,7 +9,7 @@ export default (props) => {
     type = 'button',
     href,
     /**
-     * '' (default) | blue-small | black | start-using | request | icon | copy | link | sign-in-with | profile | change-plan | cancel | cross | resent-code | icon-white
+     * '' (default) | blue-small | black | start-using | request | icon | copy | link | sign-in-with | profile | change-plan | cancel | cross | resent-code | icon-white | get-started
      */
     mode = '',
     label,

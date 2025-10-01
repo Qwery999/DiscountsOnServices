@@ -21,6 +21,12 @@
     background-color: var(--color-black1);
   }
 
+  &--get-started {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
   &--start-using {
     padding-inline: 56px;
   }
@@ -190,6 +196,12 @@
     &.button--black,
     &.button--link {
       border-color: var(--color-black2);
+    }
+
+    &.button--get-started {
+      color: var(--color-white);
+      background-color: var(--color-black1);
+      border-color: var(--color-black1);
     }
 
     &.button--start-using,

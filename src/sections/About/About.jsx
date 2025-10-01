@@ -4,7 +4,7 @@ import { Image } from 'minista'
 
 export default () => {
   return (
-    <Section className="about" title="About us" titleId="about">
+    <Section className="about" title="About us" titleId="about" id='about'>
       <div className="about__inner">
         <div className="about__body">
           <Image

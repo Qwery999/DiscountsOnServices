@@ -18,7 +18,11 @@ export default () => {
             </div>
           </div>
           <div className="hero__button-wrapper">
-            <Button label="Start using" mode="start-using" />
+            <Button
+              label="Start using"
+              mode="start-using"
+              href='#subscriptions'
+            />
           </div>
         </div>
         <div className="hero__image"></div>

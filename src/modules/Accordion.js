@@ -11,6 +11,9 @@ class Accordion {
 
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root)
+    if (!this.rootElement) {
+      return
+    }
     this.detailsElements = this.rootElement.querySelectorAll(
       this.selectors.details
     )
