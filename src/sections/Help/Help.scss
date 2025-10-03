@@ -1,9 +1,11 @@
-.faq {
+.help {
   &__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: fluid(40, 28);
+
+    padding-bottom: fluid-to-laptop(60, 50);
   }
 
   &__accordion {
@@ -11,7 +13,4 @@
     row-gap: 16px;
   }
 
-  &--padding-bottom {
-    padding-bottom: fluid-to-laptop(120, 100);
-  }
 }

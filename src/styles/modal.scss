@@ -1,0 +1,166 @@
+.modal {
+  --padding-inline:#{fluid(40, 25)};
+
+  display: flex;
+  flex-direction: column;
+  row-gap: fluid(45, 36);
+  max-width: 540px;
+  min-width: 540px;
+  padding-inline: var(--padding-inline);
+  padding-block: 40px;
+  background: var(--color-white);
+  border-radius: var(--border-radius-xl);
+
+  @include mobile {
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+    padding-top: 20px;
+    padding-bottom: 32px;
+    border-radius: 0;
+  }
+
+  &__cross {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__header {
+    position: relative;
+    display: grid;
+    row-gap: 12px;
+  }
+
+  &__subtitle {
+    & button {
+      background: none;
+      border: none;
+      color: var(--color-accent);
+      @include hover {
+        color: var(--color-black2);
+      }
+    }
+  }
+
+  &__body {
+    &--button-wrapper {
+      display: grid;
+      row-gap: 12px;
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap: fluid(40, 20);
+
+    @include mobile-above {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-fields {
+      grid-column: -1 / 1;
+      display: grid;
+      row-gap: 32px;
+    }
+
+    &-link {
+      &  button {
+        background: none;
+        border: none;
+        color: var(--color-accent);
+        @include hover {
+          color: var(--color-black2);
+        }
+      }
+      align-self: center;
+      font-weight: 700;
+
+      @include mobile {
+        grid-row: 3 / 4;
+      }
+    }
+
+    &-other {
+      grid-column: -1 / 1;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: fluid(9, 6);
+
+      & p {
+        position: relative;
+        grid-column: -1 / 1;
+        justify-self: center;
+        color: #909090;
+
+        &::after,
+        &::before {
+          --width: calc((((540px - var(--padding-inline) * 2) - 100%) - 20px) / 2);
+
+          content: '';
+          @include abs-y;
+
+          width: var(--width);
+          height: 1px;
+          background-color: currentColor;
+        }
+
+        &::after {
+          left: calc(-10px - var(--width));
+        }
+
+        &::before {
+          right: calc(-10px - var(--width));
+        }
+      }
+    }
+
+    &--grid-1 {
+      grid-template-columns: 1fr;
+    }
+
+    &-agreement {
+      position: relative;
+      display: inline-grid;
+      grid-auto-flow: column;
+      column-gap: 8px;
+      align-items: start;
+      user-select: none;
+
+      &-checkbox {
+        appearance: none;
+        inline-size: 20px;
+        block-size: 20px;
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 20px;
+          height: 20px;
+          border: 1px solid #CECBDF;
+          border-radius: 4px;
+          background: white;
+          cursor: pointer;
+        }
+
+        @include hover {
+          &::before {
+            border: 2px solid black;
+          }
+        }
+
+        &:checked {
+          &::before {
+            border: none;
+            background: url("/src/assets/icons/checkbox-checked.svg") center/cover no-repeat;
+          }
+        }
+      }
+    }
+  }
+}

@@ -95,10 +95,14 @@
   }
 
   &--sign-in-with {
-    padding: 19px 58px;
+    padding: fluid(15, 10) fluid(58, 40);
     background-color: transparent;
     border: 1px solid #dfdfdf;
     border-radius: var(--border-radius);
+
+    &.button__image {
+      width: fluid(32, 22);
+    }
   }
 
   &--profile {

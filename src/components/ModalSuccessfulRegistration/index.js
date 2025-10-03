@@ -1,0 +1,3 @@
+import ModalSuccessfulRegistration from './ModalSuccessfulRegistration'
+
+export default ModalSuccessfulRegistration

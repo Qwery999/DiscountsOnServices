@@ -1,6 +1,7 @@
 import './Field.scss'
 import getIdFromTitle from '@/utils/getIdFromTitle'
 import clsx from 'clsx'
+import Button from '@/components/Button/Button'
 
 export default (props) => {
   const {
@@ -8,25 +9,52 @@ export default (props) => {
     id = getIdFromTitle(props.label),
     label,
     /**
-     * undefined (default) | 'email' | 'textarea'
+     * undefined (default) | 'email' | 'password'
      */
     type,
     placeholder,
     isRequired,
     inputMode,
-    mask,
+    extraAttrs,
+    eye
   } = props
 
-  const Component = type === 'textarea' ? 'textarea' : 'input'
+  const eyeComponent = eye && (
+    <div className='field__button-wrapper'>
+      <Button
+        className='field__button'
+        label="eye"
+        mode="icon"
+        isLabelHidden
+        iconName="eye"
+        hasFillIcon
+        extraAttrs={{
+          'data-js-field-button': '',
+          'data-variant': 'open'
+        }}
 
-  const extraAttrs = {}
+      />
+      <Button
+        className='field__button field__button-closed is-active'
+        label="eye"
+        mode="icon"
+        isLabelHidden
+        iconName="eye-closed"
+        hasFillIcon
+        extraAttrs={{
+          'data-js-field-button': '',
+          'data-variant': 'closed'
+        }}
+      />
+    </div>
 
-  if (mask) {
-    extraAttrs['data-js-input-mask'] = mask
-  }
+  )
 
   return (
-    <div className={clsx('field', className)}>
+    <div
+      className={clsx('field', className)}
+      data-js-field=''
+    >
       <label className="field__label" htmlFor={id}>
         {label}
         {isRequired && (
@@ -35,7 +63,7 @@ export default (props) => {
           </span>
         )}
       </label>
-      <Component
+      <input
         className="field__control"
         id={id}
         type={type}
@@ -44,6 +72,7 @@ export default (props) => {
         inputMode={inputMode}
         {...extraAttrs}
       />
+      {eyeComponent}
     </div>
   )
 }

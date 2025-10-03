@@ -29,7 +29,7 @@ export default (props) => {
   const iconComponent = iconName && (
     <Icon className="button__icon" name={iconName} hasFill={hasFillIcon} />
   )
-  const imageComponent = imgSrc && <Image src={imgSrc} />
+  const imageComponent = imgSrc && <Image className="button__image" src={imgSrc} />
 
   return (
     <Component

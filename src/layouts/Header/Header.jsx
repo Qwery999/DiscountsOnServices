@@ -5,6 +5,16 @@ import Button from '@/components/Button'
 import BurgerButton from '@/components/BurgerButton'
 import Icon from '@/components/Icon'
 import SwitchLanguage from '@/components/SwitchLanguage'
+import ModalLogIn from '@/components/ModalLogIn'
+import ModalSignUp from '@/components/ModalSignUp'
+import ModalEmail from '@/components/ModalEmail'
+import ModalSuccessfulRegistration
+  from '@/components/ModalSuccessfulRegistration'
+import ModalForgetPasswordStepOne from '@/components/ModalForgetPasswordStepOne'
+import ModalForgetPasswordStepTwo from '@/components/ModalForgetPasswordStepTwo'
+import ModalForgetPasswordStepThree
+  from '@/components/ModalForgetPasswordStepThree'
+import ModalLogout from '@/components/ModalLogout'
 
 export default (props) => {
   const { url } = props
@@ -12,7 +22,7 @@ export default (props) => {
   const menuItems = [
     {
       label: 'FAQ',
-      href: '/about',
+      href: '/faq',
     },
     {
       label: 'Support',
@@ -24,8 +34,10 @@ export default (props) => {
     },
   ]
 
+
+
   return (
-    <header className="header" data-js-overlay-menu="">
+    <header className="header" data-js-header="">
       <div className="header__inner container">
         <Logo className="header__logo" loading="eager" />
         <nav className="header__menu">
@@ -78,22 +90,28 @@ export default (props) => {
             <Button
               label="WhatsApp"
               mode="icon"
-              href
+              href="https://wa.me/380999041622"
               isLabelHidden
               iconName="whatsapp"
               hasFillIcon
+              extraAttrs={{target:"_blank", rel:"noopener"}}
             />
             <Button
-              label="WhatsApp"
+              label="Telegram"
               mode="icon"
-              href
+              href="https://t.me/qwery_999"
               isLabelHidden
               iconName="telegram"
               hasFillIcon
+              extraAttrs={{target:"_blank", rel:"noopener"}}
             />
           </div>
           <SwitchLanguage />
-          <Button label="Log in" mode="blue-small" />
+          <Button
+            label="Log in"
+            mode="blue-small"
+            extraAttrs={{'data-js-modal-open':"login"}}
+          />
         </div>
         <dialog
           className="header__overlay-menu-dialog"
@@ -131,7 +149,8 @@ export default (props) => {
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
                       className="header__overlay-menu-dialog-body-link"
-                      href="/"
+                      href='/#about'
+                      data-js-overlay-menu-about=''
                     >
                       <Icon name="about" hasFill />
                       <span>About</span>
@@ -140,7 +159,7 @@ export default (props) => {
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
                       className="header__overlay-menu-dialog-body-link"
-                      href="/"
+                      href='/faq'
                     >
                       <Icon name="faq" hasFill />
                       <span>FAQ</span>
@@ -149,7 +168,7 @@ export default (props) => {
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
                       className="header__overlay-menu-dialog-body-link"
-                      href="/"
+                      href='mailto:discountsonservices.support@gmail'
                     >
                       <Icon name="support" hasFill />
                       <span>Support</span>
@@ -184,8 +203,14 @@ export default (props) => {
                 </ul>
               </nav>
               <div className="header__overlay-menu-dialog-body-actions">
-                <Button label="Login" />
-                <Button label="Sign up" />
+                <Button
+                  label="Login"
+                  extraAttrs={{'data-js-modal-open':"login"}}
+                />
+                <Button
+                  label="Sign up"
+                  extraAttrs={{'data-js-modal-open':"singup"}}
+                />
               </div>
             </div>
           </div>
@@ -214,9 +239,51 @@ export default (props) => {
           </div>
         </dialog>
         <BurgerButton
-          className="header__burger-button visible-tablet"
+          className="header__burger-button visible-mobile"
           extraAttrs={{
             'data-js-overlay-menu-burger-button': '',
+          }}
+        />
+      </div>
+      <div className="modal-pack">
+        <ModalLogIn
+          extraAttrs={{
+            'data-js-modal': 'login',
+          }}
+        />
+        <ModalSignUp
+          extraAttrs={{
+            'data-js-modal':'singup',
+          }}
+        />
+        <ModalEmail
+          extraAttrs={{
+            'data-js-modal':'email',
+          }}
+        />
+        <ModalSuccessfulRegistration
+          extraAttrs={{
+            'data-js-modal':'successful-registration',
+          }}
+        />
+        <ModalForgetPasswordStepOne
+          extraAttrs={{
+            'data-js-modal':'forget-password-step-one',
+          }}
+        />
+        <ModalForgetPasswordStepTwo
+          extraAttrs={{
+            'data-js-modal':'forget-password-step-two',
+          }}
+        />
+        <ModalForgetPasswordStepThree
+          extraAttrs={{
+            'data-js-modal':'forget-password-step-three',
+          }}
+        />
+        <ModalLogout
+          extraAttrs={{
+            'data-js-modal':'logout',
           }}
         />
       </div>

@@ -7,7 +7,7 @@
   &-text {
     font-weight: 500;
 
-    @include mobile {
+    @include tablet {
       display: none;
     }
   }
