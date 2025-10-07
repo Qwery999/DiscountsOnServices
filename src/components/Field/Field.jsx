@@ -7,7 +7,6 @@ export default (props) => {
   const {
     className,
     id = getIdFromTitle(props.label),
-    label,
     /**
      * undefined (default) | 'email' | 'password'
      */

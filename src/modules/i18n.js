@@ -15,7 +15,10 @@ export default class I18n {
   async load(lang = this.lang) {
     try {
       const res = await fetch(`${this.path}/${lang}.json`, { cache: 'no-store' });
-      if (!res.ok) throw new Error(`i18n: cannot load ${lang}`);
+      if (!res.ok) {
+        console.error(`[i18n] cannot load ${lang}: status ${res.status}`);
+        return;
+      }
       this.dict = await res.json();
       this.lang = lang;
       localStorage.setItem(this.key, lang);
@@ -29,7 +32,7 @@ export default class I18n {
   t(key, vars = {}) {
     const value = key.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : null), this.dict);
     if (value == null) return key;
-    return String(value).replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? '');
+    return String(value).replace(/\{([\w.-]+)}/g, (_, k) => vars[k] ?? '');
   }
 
   apply(root = document) {

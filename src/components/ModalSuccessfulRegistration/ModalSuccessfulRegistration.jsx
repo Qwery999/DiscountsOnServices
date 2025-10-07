@@ -1,7 +1,6 @@
 import '/src/styles/modal.scss'
 import ModalWrapper from '@/components/ModalWrapper'
 import Button from '@/components/Button'
-import Field from '@/components/Field'
 
 export default (props) => {
   const {

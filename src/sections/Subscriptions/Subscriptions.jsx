@@ -1,5 +1,4 @@
 import './Subscriptions.scss'
-import clsx from 'clsx'
 import Section from '@/layouts/Section'
 import SubscriptionCard from '@/components/SubscriptionCard'
 

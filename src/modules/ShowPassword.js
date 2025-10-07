@@ -36,9 +36,6 @@ class ShowPassword {
 
         openBtn?.setAttribute('aria-pressed',  String(willShow));
         closedBtn?.setAttribute('aria-pressed', String(!willShow));
-
-
-        field.querySelectorAll(this.selectors.buttons).forEach(b => b.classList.toggle(this.stateClasses.isActive, show))
       })
     })
   }

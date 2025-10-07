@@ -1,5 +1,4 @@
 import './Footer.scss'
-import Icon from '@/components/Icon'
 import { Image } from 'minista'
 import SwitchLanguage from '@/components/SwitchLanguage'
 import Button from '@/components/Button'
