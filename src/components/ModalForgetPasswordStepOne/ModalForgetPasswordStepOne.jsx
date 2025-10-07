@@ -27,8 +27,8 @@ export default (props) => {
               'data-js-modal-close': '',
             }}
           />
-          <h2 className="modal__title">Forget Password</h2>
-          <p className="modal__subtitle">We will send reset code in this email.</p>
+          <h2 className="modal__title" data-i18n='modal.forget-password.title'></h2>
+          <p className="modal__subtitle" data-i18n='modal.forget-password.subtitle.1'></p>
         </div>
         <div className="modal__body">
           <form className="modal__form modal__form--grid-1">
@@ -36,7 +36,6 @@ export default (props) => {
               <Field
                 label='Your Email Address'
                 labelHidden
-                placeholder='Enter your e-mail'
                 isRequired
                 inputMode='email'
                 extraAttrs={{
@@ -44,12 +43,23 @@ export default (props) => {
                   maxlength: 254,
                   autocomplete:"email",
                 }}
+                extraAttrsLang={{
+                  label: {
+                    'data-i18n':'modal.forget-password.modal1.field.label'
+                  },
+                  input: {
+                    'data-i18n-attr':'placeholder:modal.forget-password.modal1.field.placeholder'
+                  }
+                }}
               />
             </div>
             <Button
               type="submit"
               label="Submit"
-              extraAttrs={{'data-js-modal-open': 'forget-password-step-two'}}
+              extraAttrs={{
+                'data-js-modal-open': 'forget-password-step-two',
+                'data-i18n':'modal.forget-password.modal1.button'
+              }}
             />
           </form>
         </div>

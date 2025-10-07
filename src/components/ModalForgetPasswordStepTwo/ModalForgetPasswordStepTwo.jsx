@@ -28,8 +28,8 @@ export default (props) => {
               'data-js-modal-close': '',
             }}
           />
-          <h2 className="modal__title">Forget Password</h2>
-          <p className="modal__subtitle">We will send reset code in this email.</p>
+          <h2 className="modal__title" data-i18n='modal.forget-password.title'></h2>
+          <p className="modal__subtitle" data-i18n='modal.forget-password.subtitle.2'></p>
         </div>
         <div className="modal__body">
           <form className="modal__form modal__form--grid-1">
@@ -45,13 +45,19 @@ export default (props) => {
                   minLength: "6",
                   maxlength: "6",
                 }}
+                extraAttrsLang={{
+                  label: {
+                    'data-i18n':'modal.forget-password.modal2.field.label'
+                  }
+                }}
               />
             </div>
             <Button
               type="submit"
               label="Restore Password"
               extraAttrs={{
-                'data-js-modal-open': 'forget-password-step-three'
+                'data-js-modal-open': 'forget-password-step-three',
+                'data-i18n':'modal.forget-password.modal2.button'
               }}
             />
           </form>

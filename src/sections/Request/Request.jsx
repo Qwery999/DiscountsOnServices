@@ -7,14 +7,18 @@ export default () => {
       <h2 className="visually-hidden">Request</h2>
       <div className="request__inner">
         <div className="request__body">
-          <h4 className="request__title">
-            Request for an additional subscription that was not found here
-          </h4>
+          <h4 className="request__title" data-i18n='home.request.title'></h4>
           <div className="request__description">
-            <p>Disney, Amazon Prime, Microsoft Office, Microsoft Windows</p>
+            <p data-i18n='home.request.description'></p>
           </div>
         </div>
-        <Button className="request__button" label="Request" mode="request" />
+        <Button
+          className="request__button"
+          mode="request"
+          extraAttrs={{
+            'data-i18n':'home.request.button'
+          }}
+        />
       </div>
     </section>
   )

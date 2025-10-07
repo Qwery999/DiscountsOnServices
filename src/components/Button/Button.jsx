@@ -9,7 +9,7 @@ export default (props) => {
     type = 'button',
     href,
     /**
-     * '' (default) | blue-small | black | start-using | request | icon | copy | link | sign-in-with | profile | change-plan | cancel | cross | resent-code | icon-white | get-started
+     * '' (default) | blue-small | black | start-using | request | icon | copy | link | sign-in-with | pay-with | profile | change-plan | cancel | cross | resent-code | icon-white | get-started
      */
     mode = '',
     label,
@@ -29,7 +29,7 @@ export default (props) => {
   const iconComponent = iconName && (
     <Icon className="button__icon" name={iconName} hasFill={hasFillIcon} />
   )
-  const imageComponent = imgSrc && <Image className="button__image" src={imgSrc} />
+  const imageComponent = imgSrc && <Image className="button__image" src={imgSrc} width={32} />
 
   return (
     <Component

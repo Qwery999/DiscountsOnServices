@@ -3,10 +3,9 @@ import Button from '@/components/Button'
 
 export default (props) => {
   const {
-    label,
+    extraAttrs,
     price6,
     price12,
-    features = [],
   } = props
 
 
@@ -14,13 +13,11 @@ export default (props) => {
     <div
       className='plan-card'
     >
-      <h2 className="plan-card__title">{label}</h2>
+      <h2 className="plan-card__title" {...extraAttrs.label}></h2>
       <div className="plan-card__body">
         <ul className="plan-card__list">
-          {features.map(({text}, index) => (
-            <li className="plan-card__item" key={index}>
-              {text}
-            </li>
+          {extraAttrs.features.map(({text}, index) => (
+            <li className="plan-card__item" key={index} {...text}></li>
           ))}
         </ul>
         <div className="plan-card__extra">
@@ -35,6 +32,10 @@ export default (props) => {
           <Button
             label='Get started'
             mode='get-started'
+            extraAttrs={{
+              'data-js-modal-open':'subscription-application',
+              'data-i18n':'get-started'
+            }}
           />
         </div>
       </div>

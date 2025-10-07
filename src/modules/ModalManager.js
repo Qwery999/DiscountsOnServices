@@ -1,6 +1,5 @@
 class ModalManager {
   selectors = {
-    root: '[data-js-header]',
     dialog: '[data-js-overlay-menu-dialog]',
     burgerButton: '[data-js-overlay-menu-burger-button]',
     crossButton: '[data-js-overlay-menu-burger-button-cross]',
@@ -12,10 +11,7 @@ class ModalManager {
   }
 
   constructor() {
-    this.rootElement = document.querySelector(this.selectors.root)
-    if (!this.rootElement) {
-      return
-    }
+    this.rootElement = document
     this.dialogElement = this.rootElement.querySelector(this.selectors.dialog)
     this.burgerButtonElement = this.rootElement.querySelector(this.selectors.burgerButton)
     this.crossButtonElement = this.rootElement.querySelector(this.selectors.crossButton)
@@ -59,13 +55,13 @@ class ModalManager {
       return;
     }
 
-    // кнопки закрытия внутри модалки
+
     if (elem.target.closest('[data-js-modal-close]')) {
       this.closeAll();
       return;
     }
 
-    // клик по оверлею (wrapper)
+
     const wrapper = elem.target.closest('[data-js-modal]');
     if (wrapper && elem.target === wrapper) {
       this.closeAll();
@@ -77,7 +73,7 @@ class ModalManager {
   };
 
   bindEvents () {
-    this.rootElement.addEventListener('click', this.onClick)
+    this.rootElement.addEventListener('mousedown', this.onClick)
     document.addEventListener('keydown', this.onKeyDown)
   }
 }

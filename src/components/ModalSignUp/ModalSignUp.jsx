@@ -28,8 +28,8 @@ export default (props) => {
               'data-js-modal-close': '',
             }}
           />
-          <h2 className="modal__title">Create an account</h2>
-          <p className="modal__subtitle">Already have an account? <button data-js-modal-open='login'>Sign In</button></p>
+          <h2 className="modal__title" data-i18n='modal.sign-up.title'></h2>
+          <p className="modal__subtitle"><span data-i18n='modal.sign-up.subtitle.text'></span><button data-js-modal-open='login' data-i18n='modal.sign-up.subtitle.link'></button></p>
         </div>
         <div className="modal__body">
           <form className="modal__form modal__form--grid-1">
@@ -37,7 +37,6 @@ export default (props) => {
               <Field
                 label='User name'
                 labelHidden
-                placeholder='Enter your name'
                 isRequired
                 inputMode='text'
                 extraAttrs={{
@@ -45,17 +44,32 @@ export default (props) => {
                   maxlength: 254,
                   autocomplete:"name",
                 }}
+                extraAttrsLang={{
+                  label: {
+                    'data-i18n':'modal.sign-up.field1.label'
+                  },
+                  input: {
+                    'data-i18n-attr':'placeholder:modal.sign-up.field1.placeholder'
+                  }
+                }}
               />
               <Field
                 label='Email'
                 labelHidden
-                placeholder='Enter your e-mail'
                 isRequired
                 inputMode='email'
                 extraAttrs={{
                   minLength: 6,
                   maxlength: 254,
                   autocomplete:"email",
+                }}
+                extraAttrsLang={{
+                  label: {
+                    'data-i18n':'modal.sign-up.field2.label'
+                  },
+                  input: {
+                    'data-i18n-attr':'placeholder:modal.sign-up.field2.placeholder'
+                  }
                 }}
               />
               <Field
@@ -70,6 +84,11 @@ export default (props) => {
                   autocomplete:"new-password",
                   'data-js-input-password': '',
                 }}
+                extraAttrsLang={{
+                  label: {
+                    'data-i18n':'modal.sign-up.field3.label'
+                  }
+                }}
               />
             </div>
             <div className="modal__form-agreement">
@@ -79,15 +98,23 @@ export default (props) => {
                 id="agree"
                 name="agree"
               />
-              <label htmlFor="agree">Protected by reCAPTCHA and subject to the Google <a href="">Privacy Policy</a> and <a href="">Terms of Service.</a></label>
+              <label htmlFor="agree">
+                <span data-i18n='modal.sign-up.checkbox.text1'></span>
+                <a href="" data-i18n='modal.sign-up.checkbox.link1'></a>
+                <span data-i18n='modal.sign-up.checkbox.text2'></span>
+                <a href="" data-i18n='modal.sign-up.checkbox.link2'></a>
+              </label>
             </div>
             <Button
               type="button"
               label="Sing Up"
-              extraAttrs={{'data-js-modal-open':'email'}}
+              extraAttrs={{
+                'data-js-modal-open':'email',
+                'data-i18n':'modal.sign-up.button-sign-up'
+            }}
             />
             <div className="modal__form-other">
-              <p>Or sign in with</p>
+              <p data-i18n='modal.sign-up.or-sign-in-with'></p>
               <Button
                 label="Sign in with Google"
                 mode="sign-in-with"

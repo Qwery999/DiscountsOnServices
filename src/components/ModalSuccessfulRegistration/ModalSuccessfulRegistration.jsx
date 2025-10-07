@@ -27,14 +27,15 @@ export default (props) => {
               'data-js-modal-close': '',
             }}
           />
-          <h2 className="modal__title">Successful registration</h2>
-          <p className="modal__subtitle">By optimizing our work and using internal tools, we were able to lower the prices while keeping the highest possible.</p>
+          <h2 className="modal__title" data-i18n='modal.successful-registration.title'></h2>
+          <p className="modal__subtitle" data-i18n='modal.successful-registration.subtitle'></p>
         </div>
         <div className="modal__body modal__body--button-wrapper">
             <Button
               label="Continue work"
               extraAttrs={{
                 'data-js-modal-close': '',
+                'data-i18n':'modal.successful-registration.button-continue'
               }}
             />
         </div>

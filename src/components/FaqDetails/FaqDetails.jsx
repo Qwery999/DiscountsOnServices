@@ -3,17 +3,14 @@ import Icon from '@/components/Icon'
 
 export default (props) => {
   const {
-    question,
-    answer,
+    extraAttrs,
     open,
   } = props
 
   return (
     <details className="faq-details" open={open} data-js-accordion-details="">
       <summary className="faq-details__question">
-              <span>
-                {question}
-              </span>
+              <span {...extraAttrs.question}></span>
         <Icon
           className="faq-details__question-icon"
           name="accordion-arrow"
@@ -23,9 +20,7 @@ export default (props) => {
           }}
         />
       </summary>
-      <div className="faq-details__answer">
-        {answer}
-      </div>
+      <div className="faq-details__answer" {...extraAttrs.answer}></div>
     </details>
   )
 }

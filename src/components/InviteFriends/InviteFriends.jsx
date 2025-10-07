@@ -10,20 +10,21 @@ export default (props) => {
   return (
     <div className= {clsx("invite-friends", className)}>
       <div className="invite-friends__text">
-        <h3 className="invite-friends__title">Invite friends</h3>
+        <h3 className="invite-friends__title" data-i18n='home.invite-friends.title'></h3>
         <div className="invite-friends__description">
-          <p>
-            Starting today up to 50% for NETFLIX, YOUTUBE, SPOTIFY
-            subscriptions with a secure payment from PAYPAL
-          </p>
+          <p data-i18n='home.invite-friends.description'></p>
         </div>
       </div>
       <div className="invite-friends__link-wrapper">
-        <p className="invite-friends__link-clue h5">
-          Click on the link
-        </p>
+        <p className="invite-friends__link-clue h5" data-i18n='home.invite-friends.clue'></p>
         <div className="invite-friends__link-button-wrapper">
-          <Button label="DISCOUNTS ON SERVICES" mode="link" href />
+          <Button
+            mode="link"
+            href
+            extraAttrs={{
+              'data-i18n':'home.invite-friends.link'
+            }}
+          />
           <Button
             label="Copy"
             mode="copy"

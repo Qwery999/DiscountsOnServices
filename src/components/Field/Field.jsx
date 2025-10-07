@@ -16,6 +16,7 @@ export default (props) => {
     isRequired,
     inputMode,
     extraAttrs,
+    extraAttrsLang = {},
     eye
   } = props
 
@@ -56,7 +57,7 @@ export default (props) => {
       data-js-field=''
     >
       <label className="field__label" htmlFor={id}>
-        {label}
+        <span {...extraAttrsLang.label}></span>
         {isRequired && (
           <span className="field__required-star" aria-hidden="true">
             &nbsp;*
@@ -71,6 +72,7 @@ export default (props) => {
         required={isRequired}
         inputMode={inputMode}
         {...extraAttrs}
+        {...(extraAttrsLang.input)}
       />
       {eyeComponent}
     </div>

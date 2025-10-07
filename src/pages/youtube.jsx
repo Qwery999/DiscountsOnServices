@@ -6,27 +6,45 @@ export const metadata = {
 }
 
 const plan = {
-  title:'YouTube Premium',
+  extraAttrs: {
+    title: {
+      'data-i18n':'youtube.title'
+    },
+    subtitle: {
+      'data-i18n':'youtube.subtitle'
+    }
+  },
   titleId:'youtube-plan',
-  subtitle:'Select the subscription type for a period of:',
 }
 
 const cards = [
   {
-    label:'Music',
+    extraAttrs: {
+      label: {
+        'data-i18n':'youtube.card1.label'
+      },
+      features: [
+        {text:{
+            'data-i18n':'youtube.card1.features.1'
+          }}
+      ],
+    },
     price6:'60',
-    price12:'108',
-    features: [
-      {text:'Listen to music without ads, in the background and offline',},
-    ],
+    price12:'108'
   },
   {
-    label:'Premium',
+    extraAttrs: {
+      label: {
+        'data-i18n':'youtube.card2.label'
+      },
+      features: [
+        {text:{
+            'data-i18n':'youtube.card2.features.1'
+          }}
+      ],
+    },
     price6:'80',
-    price12:'144',
-    features: [
-      {text:'YouTube and YouTube Music without ads, in the background and offline',}
-    ],
+    price12:'144'
   },
 ]
 

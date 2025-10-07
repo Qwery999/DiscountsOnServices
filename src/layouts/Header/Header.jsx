@@ -15,22 +15,37 @@ import ModalForgetPasswordStepTwo from '@/components/ModalForgetPasswordStepTwo'
 import ModalForgetPasswordStepThree
   from '@/components/ModalForgetPasswordStepThree'
 import ModalLogout from '@/components/ModalLogout'
+import ModalSubscriptionApplication
+  from '@/components/ModalSubscriptionApplication'
+import ModalPurchasePayment from '@/components/ModalPurchasePayment'
+import ModalPurchasePaymentStepTwo
+  from '@/components/ModalPurchasePaymentStepTwo'
+import ModalPurchasePaymentStepThree
+  from '@/components/ModalPurchasePaymentStepThree'
+import ModalSubscriptionPaid from '@/components/ModalSubscriptionPaid'
+import {Image} from 'minista'
 
 export default (props) => {
   const { url } = props
 
   const menuItems = [
     {
-      label: 'FAQ',
       href: '/faq',
+      extraAttrs: {
+        'data-i18n': 'header.faq',
+      },
     },
     {
-      label: 'Support',
       href: 'mailto:discountsonservices.support@gmail',
+      extraAttrs: {
+        'data-i18n': 'header.support',
+      },
     },
     {
-      label: 'About',
       href: '/#about',
+      extraAttrs: {
+        'data-i18n': 'header.about',
+      },
     },
   ]
 
@@ -48,7 +63,7 @@ export default (props) => {
                   className="header__menu-dropdown-button"
                   aria-label="Subscriptions"
                 >
-                  <span>Subscriptions</span>
+                  <span data-i18n='header.subscriptions'></span>
                   <Icon name="arrow-down" />
                 </summary>
                 <ul className="header__menu-dropdown-list" role="menu">
@@ -70,7 +85,7 @@ export default (props) => {
                 </ul>
               </details>
             </li>
-            {menuItems.map(({ label, href }, index) => (
+            {menuItems.map(({ label, href, extraAttrs }, index) => (
               <li className="header__menu-item" key={index}>
                 <a
                   className={clsx(
@@ -78,8 +93,8 @@ export default (props) => {
                     href === url && 'is-active'
                   )}
                   href={href}
+                  {...extraAttrs}
                 >
-                  {label}
                 </a>
               </li>
             ))}
@@ -108,10 +123,50 @@ export default (props) => {
           </div>
           <SwitchLanguage />
           <Button
+            className='header__actions-button is-active'
             label="Log in"
             mode="blue-small"
-            extraAttrs={{'data-js-modal-open':"login"}}
+            extraAttrs={{
+              'data-js-modal-open':"login",
+              'data-js-account-active': '',
+              'data-i18n': 'header.login',
+          }}
           />
+
+          <details className="header__actions-dropdown header__actions-button" data-js-account-active=''>
+            <summary
+              className="header__actions-dropdown-button"
+              aria-label="Profile"
+            >
+              <span data-i18n='header.profile'></span>
+              <Icon name="arrow-down" />
+            </summary>
+            <ul className="header__actions-dropdown-list" role="menu">
+              <li className="header__actions-dropdown-item" role="menuitem">
+                <Button
+                  label="My profile"
+                  mode="profile"
+                  href='/account'
+                  extraAttrs={{
+                    'data-i18n':'header.my-profile'
+                  }}
+                />
+              </li>
+              <li className="header__actions-dropdown-item" role="menuitem">
+                <button
+                  className="header__actions-dropdown-item-button"
+                  type="button"
+                  data-js-modal-open='logout'
+                >
+                  <Icon
+                    name='exit'
+                    hasFill
+                  />
+                  <span data-i18n='header.logout'></span>
+                </button>
+              </li>
+            </ul>
+          </details>
         </div>
         <dialog
           className="header__overlay-menu-dialog"
@@ -136,6 +191,10 @@ export default (props) => {
           <div className="header__overlay-menu-dialog-body">
             <div className="header__overlay-menu-dialog-body-inner">
               <nav className="header__overlay-menu-dialog-body-menu">
+                <a href='/account' className="header__overlay-menu-dialog-body-account" data-js-account-active=''>
+                  <Image src='/src/assets/images/account/account1.jpg'/>
+                  <p className="header__overlay-menu-dialog-body-account-username" data-i18n='overlay-menu.username'></p>
+                </a>
                 <ul className="header__overlay-menu-dialog-body-list">
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
@@ -143,7 +202,7 @@ export default (props) => {
                       href="/"
                     >
                       <Icon name="home" hasFill />
-                      <span>Home</span>
+                      <span data-i18n='overlay-menu.home'></span>
                     </a>
                   </li>
                   <li className="header__overlay-menu-dialog-body-item">
@@ -153,7 +212,7 @@ export default (props) => {
                       data-js-overlay-menu-about=''
                     >
                       <Icon name="about" hasFill />
-                      <span>About</span>
+                      <span data-i18n='overlay-menu.about'></span>
                     </a>
                   </li>
                   <li className="header__overlay-menu-dialog-body-item">
@@ -162,7 +221,7 @@ export default (props) => {
                       href='/faq'
                     >
                       <Icon name="faq" hasFill />
-                      <span>FAQ</span>
+                      <span data-i18n='overlay-menu.faq'></span>
                     </a>
                   </li>
                   <li className="header__overlay-menu-dialog-body-item">
@@ -171,7 +230,7 @@ export default (props) => {
                       href='mailto:discountsonservices.support@gmail'
                     >
                       <Icon name="support" hasFill />
-                      <span>Support</span>
+                      <span data-i18n='overlay-menu.support'></span>
                     </a>
                   </li>
                 </ul>
@@ -203,13 +262,35 @@ export default (props) => {
                 </ul>
               </nav>
               <div className="header__overlay-menu-dialog-body-actions">
+                <button
+                  className="header__overlay-menu-dialog-body-actions-logout"
+                  type="button"
+                  data-js-modal-open='logout'
+                  data-js-account-active=''
+                >
+                  <Icon
+                    name='exit'
+                    hasFill
+                  />
+                  <span data-i18n='overlay-menu.logout'></span>
+                </button>
                 <Button
+                  className='header__overlay-menu-dialog-body-actions-button is-active'
                   label="Login"
-                  extraAttrs={{'data-js-modal-open':"login"}}
+                  extraAttrs={{
+                    'data-js-modal-open':"login",
+                    'data-js-account-active':'',
+                    'data-i18n':'overlay-menu.login'
+                  }}
                 />
                 <Button
+                  className='header__overlay-menu-dialog-body-actions-button is-active'
                   label="Sign up"
-                  extraAttrs={{'data-js-modal-open':"singup"}}
+                  extraAttrs={{
+                    'data-js-modal-open':"singup",
+                    'data-js-account-active':'',
+                    'data-i18n':'overlay-menu.sign-up'
+                }}
                 />
               </div>
             </div>
@@ -284,6 +365,31 @@ export default (props) => {
         <ModalLogout
           extraAttrs={{
             'data-js-modal':'logout',
+          }}
+        />
+        <ModalSubscriptionApplication
+          extraAttrs={{
+            'data-js-modal':'subscription-application',
+          }}
+        />
+        <ModalPurchasePayment
+          extraAttrs={{
+            'data-js-modal':'purchase-payment',
+          }}
+        />
+        <ModalPurchasePaymentStepTwo
+          extraAttrs={{
+            'data-js-modal':'purchase-payment-step-two',
+          }}
+        />
+        <ModalPurchasePaymentStepThree
+          extraAttrs={{
+            'data-js-modal':'purchase-payment-step-three',
+          }}
+        />
+        <ModalSubscriptionPaid
+          extraAttrs={{
+            'data-js-modal':'subscription-paid',
           }}
         />
       </div>

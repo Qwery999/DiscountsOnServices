@@ -8,30 +8,36 @@ export default () => {
   const subscriptions = [
     {
       label: 'Netflix',
-      href: '/',
+      href: '/netflix',
     },
     {
       label: 'YouTube Premium',
-      href: '/',
+      href: '/youtube',
     },
     {
       label: 'Spotify',
-      href: '/',
+      href: '/spotify',
     },
   ]
 
   const siteNavigation = [
     {
-      label: 'About',
-      href: '/',
+      href: '/#about',
+      extraAttrs: {
+        'data-i18n': 'footer.about'
+      }
     },
     {
-      label: 'FAQ',
-      href: '/',
+      href: '/faq',
+      extraAttrs: {
+        'data-i18n': 'footer.faq'
+      }
     },
     {
-      label: 'Support',
-      href: '/',
+      href: 'mailto:discountsonservices.support@gmail',
+      extraAttrs: {
+        'data-i18n': 'footer.support'
+      }
     },
   ]
 
@@ -48,11 +54,11 @@ export default () => {
               <span>DiscountsOnServices</span>
             </div>
             <div className="footer__logo-description">
-              <p>It's simple, fast and economical</p>
+              <p data-i18n='footer.logo-description'></p>
             </div>
           </div>
           <nav className="footer__nav">
-            <p className="footer__nav-title">Subscriptions</p>
+            <p className="footer__nav-title" data-i18n='footer.subscriptions'></p>
             <ul className="footer__nav-list">
               {subscriptions.map(({ label, href }, index) => (
                 <li className="footer__nav-item" key={index}>
@@ -64,13 +70,11 @@ export default () => {
             </ul>
           </nav>
           <nav className="footer__nav">
-            <p className="footer__nav-title">Site navigation</p>
+            <p className="footer__nav-title" data-i18n='footer.site-navigation'></p>
             <ul className="footer__nav-list">
-              {siteNavigation.map(({ label, href }, index) => (
+              {siteNavigation.map(({ href, extraAttrs }, index) => (
                 <li className="footer__nav-item" key={index}>
-                  <a className="footer__nav-link" href={href}>
-                    {label}
-                  </a>
+                  <a className="footer__nav-link" href={href} {...extraAttrs}></a>
                 </li>
               ))}
             </ul>
@@ -98,11 +102,9 @@ export default () => {
           </div>
         </div>
         <div className="footer__extra">
-          <p className="footer__extra-text">Privacy Policy</p>
-          <p className="footer__extra-text">
-            Copyright 2021 © All Rights Reserved
-          </p>
-          <p className="footer__extra-text">Developed by ....</p>
+          <p className="footer__extra-text" data-i18n='footer.privacy-policy'></p>
+          <p className="footer__extra-text" data-i18n='footer.copyright'></p>
+          <p className="footer__extra-text" data-i18n='footer.developed'></p>
         </div>
       </div>
     </footer>

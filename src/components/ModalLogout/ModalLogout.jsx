@@ -26,12 +26,23 @@ export default (props) => {
               'data-js-modal-close': '',
             }}
           />
-          <h2 className="modal__title">Are you sure want to logout?</h2>
+          <h3 className="modal__title" data-i18n='modal.logout.title'></h3>
         </div>
         <div className="modal__body modal__body--button-wrapper">
-          <Button label="Cancel" mode="cancel" />
+          <Button
+            label="Cancel"
+            mode="cancel"
+            extraAttrs={{
+              'data-js-modal-close': '',
+              'data-i18n':'modal.logout.button-cancel'
+            }}
+          />
           <Button
             label="Yes, Logout"
+            href='/'
+            extraAttrs={{
+              'data-i18n':'modal.logout.button-yes'
+            }}
           />
         </div>
       </div>

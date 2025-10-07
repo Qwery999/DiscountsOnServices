@@ -27,8 +27,8 @@ export default (props) => {
               'data-js-modal-close': '',
             }}
           />
-          <h2 className="modal__title">Email verification</h2>
-          <p className="modal__subtitle">Please enter the 6-digit verification code that was sent to name@gmail,com. The code is valid for 30 minutes.</p>
+          <h2 className="modal__title" data-i18n='modal.email.title'></h2>
+          <p className="modal__subtitle" data-i18n='modal.email.subtitle'></p>
         </div>
         <div className="modal__body">
           <form className="modal__form modal__form--grid-1">
@@ -44,21 +44,26 @@ export default (props) => {
                   minLength: "6",
                   maxlength: "6",
                 }}
+                extraAttrsLang={{
+                  label: {
+                    'data-i18n':'modal.email.field.label'
+                  }
+                }}
               />
             </div>
             <Button
               type="submit"
               label="Sing Up"
               extraAttrs={{
-                'data-js-modal-open':'successful-registration'
+                'data-js-modal-open':'successful-registration',
+                'data-i18n': 'modal.email.button-sign-up'
               }}
             />
             <a
               className="modal__form-link-again"
               href="/"
-            >
-              Didn’t receive the code?
-            </a>
+              data-i18n='modal.email.link'
+            ></a>
           </form>
         </div>
       </div>

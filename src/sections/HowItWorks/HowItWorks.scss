@@ -39,7 +39,7 @@
       max-width: 227px;
 
       &--short {
-        max-width: 115px;
+        min-height: 48px;
       }
 
       @include mobile {

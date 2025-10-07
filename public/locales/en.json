@@ -1,0 +1,428 @@
+{
+  "switch-lang": "EN",
+  "header": {
+    "subscriptions": "Subscriptions",
+    "faq": "FAQ",
+    "support": "Support",
+    "about": "About",
+    "login": "Log in",
+    "profile": "Profile",
+    "my-profile": "My profile",
+    "logout": "Logout"
+  },
+
+  "overlay-menu": {
+    "username": "User name",
+    "home": "Home",
+    "about": "About",
+    "faq": "FAQ",
+    "support": "Support",
+    "login": "Login",
+    "sign-up": "Sign up",
+    "logout": "Logout"
+  },
+
+  "footer": {
+    "logo-description": "It's simple, fast and economical",
+    "subscriptions": "Subscriptions",
+    "site-navigation": "Site navigation",
+    "faq": "FAQ",
+    "support": "Support",
+    "about": "About",
+    "privacy-policy": "Privacy Policy",
+    "copyright": "Copyright 2021 © All Rights Reserved",
+    "developed": "Developed by ..."
+  },
+
+  "home": {
+    "hero": {
+      "title": "Start enjoying a benefit of up to 50%",
+      "description": "You have always wanted to get the same product at a special price for you, without haggling - and it is yours.",
+      "start": "Start using"
+    },
+
+    "subscriptions": {
+      "title": "Choose a subscription",
+      "card-label": {
+        "netflix": "Netflix subscription rates",
+        "spotify": "Spotify Premium",
+        "youtube": "YouTube Premium"
+      },
+      "card-description": {
+        "netflix": "The constant contributes to the task of the same and thus the intended features and the set relation to the check and set also.",
+        "spotify": "The constant contributes to the task of the same and thus the intended features and the set relation to the check and set also.",
+        "youtube": "The constant contributes to the task of the same and thus the intended features and the set relation to the check and set also."
+      },
+      "learn-more": "Learn more"
+    },
+
+    "how-it-works": {
+      "title": "How it works?",
+      "card1": {
+        "title": "Step 1",
+        "description": "Enter your account information"
+      },
+      "card2": {
+        "title": "Step 2",
+        "description": "Select the desired subscription and plan"
+      },
+      "card3": {
+        "title": "Step 3",
+        "description": "Pay your bill with PayPal"
+      }
+    },
+
+    "invite-friends": {
+      "title": "Invite friends",
+      "description": "Starting today up to 50% for NETFLIX, YOUTUBE, SPOTIFY subscriptions with a secure payment from PAYPAL",
+      "clue": "Click on the link",
+      "link": "DISCOUNTS ON SERVICES"
+    },
+
+    "about": {
+      "title": "About us",
+      "description": {
+        "1": "We offer you a subscription to various media services at the best price.",
+        "2": "We have partnered with several companies to help you find the best prices for your media subscriptions and provide you with the best prices for the Premium subscriptions you want.",
+        "3": "It's simple, fast and economical."
+      }
+    },
+
+    "faq": {
+      "title": "FAQ",
+      "question1": {
+        "question": "The set time has passed, but the invoice has not yet arrived, what should I do?",
+        "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad delectus deserunt dolorem eaque earum magni ratione rem temporibus vitae!"
+      },
+      "question2": {
+        "question": "Can I change my Netflix account email and password after purchase?",
+        "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut debitis eum, illum mollitia nesciunt placeat quibusdam quod. Cupiditate debitis dolor ducimus error facere itaque magni neque non odio quibusdam quo quos recusandae reprehenderit, saepe sit soluta unde velit vitae voluptate voluptatem. Architecto at cupiditate, deleniti eligendi enim necessitatibus quia soluta!"
+      },
+      "question3": {
+        "question": "Can I add a phone number for password recovery?",
+        "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci asperiores commodi dicta distinctio ducimus exercitationem facilis fuga iste laboriosam mollitia possimus quis ratione totam, vel. Ex id ipsam rem."
+      },
+      "question4": {
+        "question": "How soon will I receive the account information I ordered?",
+        "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto blanditiis deserunt dolore dolorum eos ex facere fuga, illo illum iure iusto minima molestias natus necessitatibus nemo nihil nulla obcaecati perferendis, praesentium quae quos rerum saepe sunt suscipit totam veritatis?"
+      },
+      "question5": {
+        "question": "How to pay?",
+        "answer": "Payment options we currently have: PayPal, Bitcoin."
+      },
+      "support": "Support"
+    },
+
+    "request": {
+      "title": "Request for an additional subscription that was not found here",
+      "description": "Disney, Amazon Prime, Microsoft Office, Microsoft Windows",
+      "button": "Request"
+    }
+  },
+
+  "period": {
+    "6": "6 months",
+    "12": "12 months"
+  },
+
+  "get-started": "Get started",
+
+  "netflix":{
+    "title": "Choose a Netflix Plan",
+    "subtitle": "Listen without limits at a bargain price",
+    "card1": {
+      "label": "Basic",
+      "features": {
+        "1": "Ad-free music listening",
+        "2": "Play anywhere - even offline",
+        "3": "On-demand playback"
+      }
+    },
+    "card2": {
+      "label": "Standart",
+      "features": {
+        "1": "Ad-free music listening",
+        "2": "Play anywhere - even offline",
+        "3": "On-demand playback"
+      }
+    },
+    "card3": {
+      "label": "Premium",
+      "features": {
+        "1": "Ad-free music listening",
+        "2": "Play anywhere - even offline",
+        "3": "On-demand playback"
+      }
+    }
+  },
+
+  "spotify":{
+    "title": "Choose a Spotify Plan",
+    "subtitle": "Select the subscription type for a period of:",
+    "card1": {
+      "label": "Individual",
+      "features": {
+        "1": "Ad-free music listening",
+        "2": "Play anywhere - even offline",
+        "3": "On-demand playback"
+      }
+    },
+    "card2": {
+      "label": "Duo",
+      "features": {
+        "1": "2 Premium accounts for a couple under one roof",
+        "2": "Ad-free music listening, play offline, on-demand playback"
+      }
+    },
+    "card3": {
+      "label": "Family",
+      "features": {
+        "1": "6 Premium accounts for family members living under one roof'",
+        "2": "Block explicit music",
+        "3": "Ad-free music listening, play offline, on-demand playback"
+      }
+    }
+  },
+
+  "youtube":{
+    "title": "YouTube Premium",
+    "subtitle": "Select the subscription type for a period of:",
+    "card1": {
+      "label": "Music",
+      "features": {
+        "1": "Listen to music without ads, in the background and offline"
+      }
+    },
+    "card2": {
+      "label": "Premium",
+      "features": {
+        "1": "YouTube and YouTube Music without ads, in the background and offline"
+      }
+    }
+  },
+
+  "help": {
+    "title": "How can we help you?",
+    "question1": {
+      "question": "The set time has passed, but the invoice has not yet arrived, what should I do?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad delectus deserunt dolorem eaque earum magni ratione rem temporibus vitae!"
+    },
+    "question2": {
+      "question": "Can I change my Netflix account email and password after purchase?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut debitis eum, illum mollitia nesciunt placeat quibusdam quod. Cupiditate debitis dolor ducimus error facere itaque magni neque non odio quibusdam quo quos recusandae reprehenderit, saepe sit soluta unde velit vitae voluptate voluptatem. Architecto at cupiditate, deleniti eligendi enim necessitatibus quia soluta!"
+    },
+    "question3": {
+      "question": "Can I add a phone number for password recovery?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci asperiores commodi dicta distinctio ducimus exercitationem facilis fuga iste laboriosam mollitia possimus quis ratione totam, vel. Ex id ipsam rem."
+    },
+    "question4": {
+      "question": "How soon will I receive the account information I ordered?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto blanditiis deserunt dolore dolorum eos ex facere fuga, illo illum iure iusto minima molestias natus necessitatibus nemo nihil nulla obcaecati perferendis, praesentium quae quos rerum saepe sunt suscipit totam veritatis?"
+    },
+    "question5": {
+      "question": "How to pay?",
+      "answer": "Payment options we currently have: PayPal, Bitcoin."
+    },
+    "support": "Support"
+  },
+
+  "account": {
+    "title": "Personal data management",
+    "exit": "Exit the office",
+    "tabs": {
+      "info": "Account info",
+      "subscriptions": "My Subscriptions"
+    },
+    "account-info": {
+      "title": "Account info",
+      "field1": {
+        "label": "ID user"
+      },
+      "field2": {
+        "label": "How can I call you?",
+        "placeholder": "Enter your name"
+      },
+      "field3": {
+        "label": "E-mail",
+        "placeholder": "Enter your e-mail"
+      },
+      "button": "Save changes"
+    },
+    "subscriptions": {
+      "1": {
+        "title": "Spotify Premium Duo",
+        "description": "Two separate Premium accounts for people who live together."
+      },
+      "2": {
+        "title": "Spotify Premium Duo",
+        "description": "Two separate Premium accounts for people who live together."
+      },
+      "link": "Change plan"
+    }
+  },
+
+  "modal": {
+    "login": {
+      "title": "Log in",
+      "subtitle" : {
+        "text": "New user?",
+        "link": "Create an account"
+      },
+      "field1": {
+        "label": "Email Address",
+        "placeholder": "Enter your e-mail"
+      },
+      "field2": {
+        "label": "Password"
+      },
+      "forgot-password": "Forgot password",
+      "button-login": "Log in",
+      "or-sign-in-with": "Or sign in with",
+      "footer": {
+        "text1": "Protected by reCAPTCHA and subject to the Google ",
+        "link1": "Privacy Policy",
+        "text2": " and ",
+        "link2": "Terms of Service."
+      }
+    },
+
+    "sign-up": {
+      "title": "Create an account",
+      "subtitle" : {
+        "text": "Already have an account? ",
+        "link": "Sign In"
+      },
+      "field1": {
+        "label": "User name",
+        "placeholder": "Enter your name"
+      },
+      "field2": {
+        "label": "Email Address",
+        "placeholder": "Enter your e-mail"
+      },
+      "field3": {
+        "label": "Password"
+      },
+      "checkbox": {
+        "text1": "By creating an account you agree to our ",
+        "link1": "Privacy Policy",
+        "text2": " and ",
+        "link2": "Terms of Service."
+      },
+      "button-sing-up": "Sign up",
+      "or-sign-in-with": "Or sign in with"
+    },
+
+    "email": {
+      "title": "Email verification",
+      "subtitle" : "Please enter the 6-digit verification code that was sent to name@gmail,com. The code is valid for 30 minutes.",
+      "field": {
+        "label": "Email verification code"
+      },
+      "button-sign-up": "Sign up",
+      "link": "Didn’t receive the code?"
+    },
+
+    "successful-registration": {
+      "title": "Successful registration",
+      "subtitle" : "By optimizing our work and using internal tools, we were able to lower the prices while keeping the highest possible.",
+      "button-continue": "Continue work"
+    },
+
+    "forget-password": {
+      "title": "Forget Password",
+      "subtitle": {
+        "1": "We will send reset code in this email.",
+        "2": "We will send reset code in this email.",
+        "3": "Enter a new password."
+      },
+      "modal1": {
+        "field": {
+          "label": "Email Address",
+          "placeholder": "name@gmail.com"
+        },
+        "button": "Submit"
+      },
+      "modal2": {
+        "field": {
+          "label": "Email verification code"
+        },
+        "button": "Restore Password"
+      },
+      "modal3": {
+        "field1": {
+          "label": "Password"
+        },
+        "field2": {
+          "label": "Confirm Password"
+        },
+        "button": "Restore Password"
+      }
+    },
+
+    "logout": {
+      "title": "Are you sure want to logout?",
+      "button-cancel": "Cancel",
+      "button-yes": "Yes, Logout"
+    },
+
+    "subscription-application": {
+      "title": "Subscription Application",
+      "field1": {
+        "label": "Enter your name",
+        "placeholder": "Anastasiia"
+      },
+      "field2": {
+        "label": "E-mail",
+        "placeholder": "Enter your e-mail"
+      },
+      "field3": {
+        "label": "Phone",
+        "placeholder": "Enter your phone"
+      },
+      "button": "Apply"
+    },
+
+    "purchase-payment": {
+      "title": "Purchase payment",
+      "subtitle": "Payment by crypto wallet",
+      "modal1": {
+        "field1": {
+          "label": "Card Number"
+        },
+        "field2": {
+          "label": "Expiration Date",
+          "placeholder": "MM / YY"
+        },
+        "field3": {
+          "label": "СVV",
+          "placeholder": "СVV"
+        },
+        "pay-with-card": "Pay with card",
+        "warning": "We do not collect information on your cards, everything is safe",
+        "field4": {
+          "label": "Select currency"
+        },
+        "pay": "Pay"
+      },
+      "modal2": {
+        "field": {
+          "label": "Choose the Blockchain Network"
+        },
+        "pay": "Pay"
+      },
+      "modal3": {
+        "sum": "The amount to be paid: ",
+        "blockchain": "Blockchain: ",
+        "link": "You can copy the address:",
+        "pay": "OK"
+      }
+    },
+
+    "subscription-paid": {
+      "title": "Subscription paid",
+      "button": "Continue work"
+    }
+  }
+}
+

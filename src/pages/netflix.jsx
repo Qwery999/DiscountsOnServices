@@ -6,41 +6,77 @@ export const metadata = {
 }
 
 const plan = {
-  title:'Choose a Netflix Plan',
+  extraAttrs: {
+    title: {
+      'data-i18n':'netflix.title'
+    },
+    subtitle: {
+      'data-i18n':'netflix.subtitle'
+    }
+  },
   titleId:'netflix-plan',
-  subtitle:'Listen without limits at a bargain price',
 }
 
 const cards = [
   {
-    label:'Basic',
+    extraAttrs: {
+      label: {
+        'data-i18n':'netflix.card1.label'
+      },
+      features: [
+        {text:{
+            'data-i18n':'netflix.card1.features.1'
+          }},
+        {text:{
+            'data-i18n':'netflix.card1.features.2'
+          }},
+        {text:{
+            'data-i18n':'netflix.card1.features.3'
+          }},
+      ],
+    },
     price6:'45',
     price12:'81',
-    features: [
-      {text:'Ad-free music listening',},
-      {text:'Play anywhere - even offline',},
-      {text:'On-demand playback',},
-    ],
   },
   {
-    label:'Standart',
+    extraAttrs: {
+      label: {
+        'data-i18n':'netflix.card2.label'
+      },
+      features: [
+        {text:{
+            'data-i18n':'netflix.card2.features.1'
+          }},
+        {text:{
+            'data-i18n':'netflix.card2.features.2'
+          }},
+        {text:{
+            'data-i18n':'netflix.card2.features.3'
+          }},
+      ],
+    },
     price6:'60',
     price12:'108',
-    features: [
-      {text:'Ad-free music listening',},
-      {text:'Play anywhere - even offline',},
-      {text:'On-demand playback',},
-    ],
   },
   {
-    label:'Premium',
+    extraAttrs: {
+      label: {
+        'data-i18n':'netflix.card3.label'
+      },
+      features: [
+        {text:{
+            'data-i18n':'netflix.card3.features.1'
+          }},
+        {text:{
+            'data-i18n':'netflix.card3.features.2'
+          }},
+        {text:{
+            'data-i18n':'netflix.card3.features.3'
+          }},
+      ],
+    },
     price6:'80',
     price12:'144',
-    features: [
-      {text:'Ad-free music listening',},
-      {text:'Play anywhere - even offline',},
-      {text:'On-demand playback',},
-    ],
   },
 ]
 

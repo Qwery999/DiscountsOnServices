@@ -20,6 +20,10 @@
     border-radius: 0;
   }
 
+  &--payment {
+    row-gap: fluid(32, 28);
+  }
+
   &__cross {
     position: absolute;
     top: 0;
@@ -52,11 +56,59 @@
       display: grid;
       row-gap: 12px;
     }
+
+    & h5 {
+      font-weight: 700;
+    }
+
+    &-crypto {
+      display: grid;
+      row-gap: 24px;
+
+      &-info {
+        display: grid;
+        row-gap: 24px;
+
+        &-sum,
+        &-blockchain {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      &-link {
+        display: grid;
+        row-gap: 12px;
+
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+
+      & p,
+      & h5 {
+        margin: 0;
+      }
+    }
+
+    &-paid {
+      display: grid;
+
+      &-image,
+      & h3 {
+        justify-self: center;
+        font-weight: 700;
+      }
+
+      @include mobile {
+        row-gap: 80px;
+      }
+    }
   }
 
   &__form {
     display: grid;
-    gap: fluid(40, 20);
+    gap: fluid(32, 20);
 
     @include mobile-above {
       grid-template-columns: repeat(2, 1fr);
@@ -66,6 +118,15 @@
       grid-column: -1 / 1;
       display: grid;
       row-gap: 32px;
+
+      &--grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: fluid(20, 13);
+      }
+
+      &--stretched {
+        grid-column: -1 / 1;
+      }
     }
 
     &-link {
@@ -124,6 +185,11 @@
       grid-template-columns: 1fr;
     }
 
+    &--grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: fluid(20, 13);
+    }
+
     &-agreement {
       position: relative;
       display: inline-grid;
@@ -162,5 +228,15 @@
         }
       }
     }
+
+    &--stretched {
+      grid-column: -1 / 1;
+
+      & + p {
+        font-size: 14px;
+        color: #7F7F7F;
+      }
+    }
+
   }
 }

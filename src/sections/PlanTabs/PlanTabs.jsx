@@ -5,9 +5,8 @@ import clsx from 'clsx'
 
 export default (props) => {
   const {
-    title,
+    extraAttrs,
     titleId,
-    subtitle,
     cards =[],
     mode
   } = props
@@ -20,8 +19,8 @@ export default (props) => {
     >
       <div className="plan-tabs__inner container">
         <header className="plan-tabs__header">
-          <h1 className="plan-tabs__title" id={titleId}>{title}</h1>
-          <p className="plan-tabs__subtitle paragraph-blog">{subtitle}</p>
+          <h1 className="plan-tabs__title" id={titleId} {...extraAttrs.title}></h1>
+          <p className="plan-tabs__subtitle paragraph-blog" {...extraAttrs.subtitle}></p>
         </header>
         <div className="plan-tabs__body" data-js-tabs=''>
           <div className="plan-tabs__body-period">
@@ -30,14 +29,14 @@ export default (props) => {
               type="button"
               data-js-tabs-button=''
             >
-              <span className='paragraph-blog'>6 months</span>
+              <span className='paragraph-blog' data-i18n='period.6'></span>
             </button>
             <button
               className='plan-tabs__button'
               type="button"
               data-js-tabs-button=''
             >
-              <span className='paragraph-blog'>12 months</span>
+              <span className='paragraph-blog' data-i18n='period.12'></span>
             </button>
           </div>
           <div className={clsx(

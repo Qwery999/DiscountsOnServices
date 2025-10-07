@@ -28,8 +28,8 @@ const {
                 'data-js-modal-close': '',
               }}
             />
-            <h2 className="modal__title">Log in</h2>
-            <p className="modal__subtitle">New user? <button data-js-modal-open='singup'>Create an account</button></p>
+            <h2 className="modal__title" data-i18n='modal.login.title'></h2>
+            <p className="modal__subtitle"><span data-i18n='modal.login.subtitle.text'></span><button data-js-modal-open='singup' data-i18n='modal.login.subtitle.link'></button></p>
           </div>
           <div className="modal__body">
             <form className="modal__form">
@@ -37,13 +37,20 @@ const {
                 <Field
                   label='Email Address'
                   labelHidden
-                  placeholder='Enter your e-mail'
                   isRequired
                   inputMode='email'
                   extraAttrs={{
                     minLength: 6,
                     maxlength: 254,
                     autocomplete:"email",
+                  }}
+                  extraAttrsLang={{
+                    label: {
+                      'data-i18n':'modal.login.field1.label'
+                    },
+                    input: {
+                      'data-i18n-attr':'placeholder:modal.login.field1.placeholder'
+                    }
                   }}
                 />
                 <Field
@@ -58,24 +65,29 @@ const {
                     autocomplete:"new-password",
                     'data-js-input-password': '',
                   }}
+                  extraAttrsLang={{
+                    label: {
+                      'data-i18n':'modal.login.field2.label'
+                    }
+                  }}
                 />
               </div>
               <div className="modal__form-link">
                 <button
                   data-js-modal-open='forget-password-step-one'
-                >
-                  Forgot password?
-                </button>
+                  data-i18n='modal.login.forgot-password'
+                ></button>
               </div>
               <Button
                 type='button'
                 label='Log in'
                 extraAttrs={{
-                  'data-js-modal-close': '',
+                  'data-js-account-login':'',
+                  'data-i18n':'modal.login.button-login'
                 }}
               />
               <div className="modal__form-other">
-                <p>Or sign in with</p>
+                <p data-i18n='modal.login.or-sign-in-with'></p>
                 <Button
                   type='button'
                   label="Sign in with Google"
@@ -103,7 +115,12 @@ const {
             </form>
           </div>
           <div className="modal__footer">
-            <p>Protected by reCAPTCHA and subject to the Google <a href="">Privacy Policy</a> and <a href="">Terms of Service.</a></p>
+            <p>
+              <span data-i18n='modal.login.footer.text1'></span>
+              <a href="" data-i18n='modal.login.footer.link1'></a>
+              <span data-i18n='modal.login.footer.text2'></span>
+              <a href="" data-i18n='modal.login.footer.link2'></a>
+            </p>
           </div>
         </div>
       </ModalWrapper>

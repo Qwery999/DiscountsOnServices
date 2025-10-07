@@ -28,8 +28,8 @@ export default (props) => {
               'data-js-modal-close': '',
             }}
           />
-          <h2 className="modal__title">Forget Password</h2>
-          <p className="modal__subtitle">Enter a new password.</p>
+          <h2 className="modal__title" data-i18n='modal.forget-password.title'></h2>
+          <p className="modal__subtitle" data-i18n='modal.forget-password.subtitle.3'></p>
         </div>
         <div className="modal__body">
           <form className="modal__form modal__form--grid-1">
@@ -46,6 +46,11 @@ export default (props) => {
                   autocomplete:"new-password",
                   'data-js-input-password': '',
                 }}
+                extraAttrsLang={{
+                  label: {
+                    'data-i18n':'modal.forget-password.modal3.field1.label'
+                  }
+                }}
               />
               <Field
                 label='Confirm Password'
@@ -59,6 +64,11 @@ export default (props) => {
                   autocomplete:"new-password",
                   'data-js-input-password': '',
                 }}
+                extraAttrsLang={{
+                  label: {
+                    'data-i18n':'modal.forget-password.modal3.field2.label'
+                  }
+                }}
               />
             </div>
             <Button
@@ -66,6 +76,7 @@ export default (props) => {
               label="Restore Password"
               extraAttrs={{
                 'data-js-modal-close': '',
+                'data-i18n':'modal.forget-password.modal3.button'
               }}
             />
           </form>

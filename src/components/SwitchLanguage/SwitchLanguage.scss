@@ -34,6 +34,11 @@
   &__item {
     border-radius: 8px;
 
+    & button {
+      background: none;
+      border: none;
+    }
+
     @include hover {
       background-color: #f7f7f7;
     }

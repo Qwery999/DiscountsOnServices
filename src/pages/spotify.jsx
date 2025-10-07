@@ -6,40 +6,74 @@ export const metadata = {
 }
 
 const plan = {
-  title:'Choose a Spotify Plan',
+  extraAttrs: {
+    title: {
+      'data-i18n':'spotify.title'
+    },
+    subtitle: {
+      'data-i18n':'spotify.subtitle'
+    }
+  },
   titleId:'spotify-plan',
-  subtitle:'Select the subscription type for a period of:',
 }
 
 const cards = [
   {
-    label:'Individual',
+    extraAttrs: {
+      label: {
+        'data-i18n':'spotify.card1.label'
+      },
+      features: [
+        {text:{
+            'data-i18n':'spotify.card1.features.1'
+          }},
+        {text:{
+            'data-i18n':'spotify.card1.features.2'
+          }},
+        {text:{
+            'data-i18n':'spotify.card1.features.3'
+          }},
+      ],
+    },
     price6:'47',
     price12:'85',
-    features: [
-      {text:'Ad-free music listening',},
-      {text:'Play anywhere - even offline',},
-      {text:'On-demand playback',},
-    ],
   },
   {
-    label:'Duo',
+    extraAttrs: {
+      label: {
+        'data-i18n':'spotify.card2.label'
+      },
+      features: [
+        {text:{
+            'data-i18n':'spotify.card2.features.1'
+          }},
+        {text:{
+            'data-i18n':'spotify.card2.features.2'
+          }}
+      ],
+    },
     price6:'57',
     price12:'103',
-    features: [
-      {text:'2 Premium accounts for a couple under one roof',},
-      {text:'Ad-free music listening, play offline, on-demand playback',},
-    ],
   },
   {
-    label:'Family',
+    extraAttrs: {
+      label: {
+        'data-i18n':'spotify.card3.label'
+      },
+      features: [
+        {text:{
+            'data-i18n':'spotify.card3.features.1'
+          }},
+        {text:{
+            'data-i18n':'spotify.card3.features.2'
+          }},
+        {text:{
+            'data-i18n':'spotify.card3.features.3'
+          }},
+      ],
+    },
     price6:'77',
-    price12:'134',
-    features: [
-      {text:'6 Premium accounts for family members living under one roof',},
-      {text:'Block explicit music',},
-      {text:'Ad-free music listening, play offline, on-demand playback',},
-    ],
+    price12:'134'
   },
 ]
 
