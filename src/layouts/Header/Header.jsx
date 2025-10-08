@@ -199,7 +199,7 @@ export default (props) => {
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
                       className="header__overlay-menu-dialog-body-link"
-                      href="/"
+                      href="./"
                     >
                       <Icon name="home" hasFill />
                       <span data-i18n='overlay-menu.home'></span>
