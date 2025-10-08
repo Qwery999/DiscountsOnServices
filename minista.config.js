@@ -9,7 +9,7 @@ export default defineConfig({
   root: '',
 
   // Базовый путь (если деплой не в корень сайта, поменяй)
-  base: '/',
+  base: '/discounts-on-services/',
 
   // Папка с публичными файлами (копируются как есть)
   public: 'public',
@@ -43,7 +43,7 @@ export default defineConfig({
 
     // SVG-спрайт из папки с иконками
     icons: {
-      srcDir: 'src/assets/icons',
+      srcDir: './src/assets/icons',
       outDir: 'assets/images',
       outName: '[dirname]',
       svgstoreOptions: {
