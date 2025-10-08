@@ -9,7 +9,7 @@ export default (props) => {
   return (
     <a
       className={clsx('logo', className)}
-      href="/"
+      href="./"
       title={title}
       aria-label={title}
     >

@@ -87,6 +87,7 @@ export default () => {
                 isLabelHidden
                 iconName="whatsapp"
                 hasFillIcon
+                extraAttrs={{target:"_blank", rel:"noopener"}}
               />
               <Button
                 label="Telegram"
@@ -95,6 +96,7 @@ export default () => {
                 isLabelHidden
                 iconName="telegram"
                 hasFillIcon
+                extraAttrs={{target:"_blank", rel:"noopener"}}
               />
             </div>
             <SwitchLanguage mode="footer" />
