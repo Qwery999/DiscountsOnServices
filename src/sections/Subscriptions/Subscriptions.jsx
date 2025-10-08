@@ -13,7 +13,7 @@ export default () => {
           'data-i18n': 'home.subscriptions.card-description.netflix'
         }
       },
-      href: '/netflix',
+      href: './netflix',
       imgSrc: '/src/assets/images/subscriptions/subscriptions1.jpg',
     },
     {
@@ -25,7 +25,7 @@ export default () => {
           'data-i18n': 'home.subscriptions.card-description.spotify'
         }
       },
-      href: '/spotify',
+      href: './spotify',
       imgSrc: '/src/assets/images/subscriptions/subscriptions2.jpg',
     },
     {
@@ -37,7 +37,7 @@ export default () => {
           'data-i18n': 'home.subscriptions.card-description.youtube'
         }
       },
-      href: '/youtube',
+      href: './youtube',
       imgSrc: '/src/assets/images/subscriptions/subscriptions3.jpg',
     },
   ]
