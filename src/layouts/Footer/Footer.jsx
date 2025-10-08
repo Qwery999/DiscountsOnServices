@@ -7,27 +7,27 @@ export default () => {
   const subscriptions = [
     {
       label: 'Netflix',
-      href: '/netflix',
+      href: './netflix',
     },
     {
       label: 'YouTube Premium',
-      href: '/youtube',
+      href: './youtube',
     },
     {
       label: 'Spotify',
-      href: '/spotify',
+      href: './spotify',
     },
   ]
 
   const siteNavigation = [
     {
-      href: '/#about',
+      href: './#about',
       extraAttrs: {
         'data-i18n': 'footer.about'
       }
     },
     {
-      href: '/faq',
+      href: './faq',
       extraAttrs: {
         'data-i18n': 'footer.faq'
       }
@@ -83,7 +83,7 @@ export default () => {
               <Button
                 label="WhatsApp"
                 mode="icon-white"
-                href="/"
+                href="https://wa.me/380999041622"
                 isLabelHidden
                 iconName="whatsapp"
                 hasFillIcon
@@ -91,7 +91,7 @@ export default () => {
               <Button
                 label="Telegram"
                 mode="icon-white"
-                href="/"
+                href="https://t.me/qwery_999"
                 isLabelHidden
                 iconName="telegram"
                 hasFillIcon

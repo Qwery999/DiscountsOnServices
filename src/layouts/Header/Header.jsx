@@ -68,17 +68,17 @@ export default (props) => {
                 </summary>
                 <ul className="header__menu-dropdown-list" role="menu">
                   <li className="header__menu-dropdown-item" role="menuitem">
-                    <a className="header__menu-dropdown-link" href="/netflix">
+                    <a className="header__menu-dropdown-link" href="./netflix">
                       Netflix
                     </a>
                   </li>
                   <li className="header__menu-dropdown-item" role="menuitem">
-                    <a className="header__menu-dropdown-link" href="/youtube">
+                    <a className="header__menu-dropdown-link" href="./youtube">
                       YouTube Premium
                     </a>
                   </li>
                   <li className="header__menu-dropdown-item" role="menuitem">
-                    <a className="header__menu-dropdown-link" href="/spotify">
+                    <a className="header__menu-dropdown-link" href="./spotify">
                       Spotify
                     </a>
                   </li>
@@ -146,7 +146,7 @@ export default (props) => {
                 <Button
                   label="My profile"
                   mode="profile"
-                  href='/account'
+                  href='./account'
                   extraAttrs={{
                     'data-i18n':'header.my-profile'
                   }}
@@ -191,7 +191,7 @@ export default (props) => {
           <div className="header__overlay-menu-dialog-body">
             <div className="header__overlay-menu-dialog-body-inner">
               <nav className="header__overlay-menu-dialog-body-menu">
-                <a href='/account' className="header__overlay-menu-dialog-body-account" data-js-account-active=''>
+                <a href='./account' className="header__overlay-menu-dialog-body-account" data-js-account-active=''>
                   <Image src='/src/assets/images/account/account1.jpg'/>
                   <p className="header__overlay-menu-dialog-body-account-username" data-i18n='overlay-menu.username'></p>
                 </a>
@@ -208,7 +208,7 @@ export default (props) => {
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
                       className="header__overlay-menu-dialog-body-link"
-                      href='/#about'
+                      href='./#about'
                       data-js-overlay-menu-about=''
                     >
                       <Icon name="about" hasFill />
@@ -218,7 +218,7 @@ export default (props) => {
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
                       className="header__overlay-menu-dialog-body-link"
-                      href='/faq'
+                      href='./faq'
                     >
                       <Icon name="faq" hasFill />
                       <span data-i18n='overlay-menu.faq'></span>
@@ -238,7 +238,7 @@ export default (props) => {
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
                       className="header__overlay-menu-dialog-body-link"
-                      href="/netflix"
+                      href="./netflix"
                     >
                       Netflix
                     </a>
@@ -246,7 +246,7 @@ export default (props) => {
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
                       className="header__overlay-menu-dialog-body-link"
-                      href="/youtube"
+                      href="./youtube"
                     >
                       YouTube
                     </a>
@@ -254,7 +254,7 @@ export default (props) => {
                   <li className="header__overlay-menu-dialog-body-item">
                     <a
                       className="header__overlay-menu-dialog-body-link"
-                      href="/spotify"
+                      href="./spotify"
                     >
                       Spotify
                     </a>
