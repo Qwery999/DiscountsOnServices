@@ -1,7 +1,7 @@
 export default class I18n {
   constructor(options = {}) {
     this.supported = options.supported || ['en', 'ua'];
-    this.path = options.path || '/locales';
+    this.path = options.path || './locales';
     this.key = 'lang';
     this.lang = localStorage.getItem(this.key) || this.detectLang();
     this.dict = {};
