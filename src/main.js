@@ -6,6 +6,7 @@ import ShowPassword from '@/modules/ShowPassword'
 import AccountTabs from '@/modules/AccountTabs'
 import Account from '@/modules/Account'
 import I18n from '@/modules/i18n'
+
 const i18n = new I18n({
   supported: ['en', 'ua'],
   path: `${import.meta.env.BASE_URL}locales`

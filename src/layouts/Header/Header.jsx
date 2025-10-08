@@ -30,7 +30,7 @@ export default (props) => {
 
   const menuItems = [
     {
-      href: '/faq',
+      href: './faq',
       extraAttrs: {
         'data-i18n': 'header.faq',
       },
@@ -42,7 +42,7 @@ export default (props) => {
       },
     },
     {
-      href: '/#about',
+      href: './#about',
       extraAttrs: {
         'data-i18n': 'header.about',
       },
