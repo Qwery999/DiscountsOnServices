@@ -301,18 +301,20 @@ export default (props) => {
                 <Button
                   label="WhatsApp"
                   mode="icon"
-                  href
+                  href="https://wa.me/380999041622"
                   isLabelHidden
                   iconName="whatsapp"
                   hasFillIcon
+                  extraAttrs={{target:"_blank", rel:"noopener"}}
                 />
                 <Button
                   label="WhatsApp"
                   mode="icon"
-                  href
+                  href="https://t.me/qwery_999"
                   isLabelHidden
                   iconName="telegram"
                   hasFillIcon
+                  extraAttrs={{target:"_blank", rel:"noopener"}}
                 />
               </div>
               <SwitchLanguage mode="overlay-menu" />
