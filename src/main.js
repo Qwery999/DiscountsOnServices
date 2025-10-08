@@ -8,8 +8,9 @@ import Account from '@/modules/Account'
 import I18n from '@/modules/i18n'
 const i18n = new I18n({
   supported: ['en', 'ua'],
-  path: '/locales'
+  path: `${import.meta.env.BASE_URL}locales`
 });
+
 i18n.load();
 i18n.initLanguageButtons();
 
