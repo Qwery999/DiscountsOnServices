@@ -17,7 +17,7 @@ export default (props) => {
           <h1 data-i18n='account.title'></h1>
           <a
             className='hidden-mobile'
-            href="/"
+            href="./"
             data-js-modal-open='logout'
           >
             <Icon

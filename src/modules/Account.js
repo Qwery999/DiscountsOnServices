@@ -7,6 +7,7 @@ class Account {
 
   stateClasses = {
     isActive: 'is-active',
+    isLock: 'is-lock'
   }
 
   constructor() {

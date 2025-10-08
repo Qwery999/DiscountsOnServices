@@ -10,6 +10,7 @@
   padding-block: 40px;
   background: var(--color-white);
   border-radius: var(--border-radius-xl);
+  overflow-y: scroll;
 
   @include mobile {
     width: 100%;

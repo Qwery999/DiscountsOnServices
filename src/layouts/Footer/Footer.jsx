@@ -49,6 +49,7 @@ export default () => {
               <Image
                 className="footer__logo-images"
                 src="/src/assets/images/logo-footer.png"
+                width={60}
               />
               <span>DiscountsOnServices</span>
             </div>

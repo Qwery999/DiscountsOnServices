@@ -39,7 +39,7 @@ export default (props) => {
           />
           <Button
             label="Yes, Logout"
-            href='/'
+            href='./'
             extraAttrs={{
               'data-i18n':'modal.logout.button-yes'
             }}
